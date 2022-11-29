@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch RadiationCalculator",
+            "request": "launch",
+            "mainClass": "Java.RadiationCalculator",
+            "projectName": "Code_2257536c"
+        },
+        {
+            "type": "java",
             "name": "Launch HeadsOrTails",
             "request": "launch",
             "mainClass": "Java.HeadsOrTails",
