@@ -6,19 +6,22 @@ public class RadiationCalculator {
 
         Scanner input = new Scanner(System.in);
 
-        // Average radiation per x-ray =  10 mrem
-        // Elevation radiation at Kean = 2 mrem
-        // Average CT scan = 500 mrem
-        // Pocelain teeth (y/n) = 0.07 mrem
-        // Fire detector = 0.008 mrem
-        // Living within the radius of the Salem NJ powerplant = 0.009 mrem
-        // Living within radius of coal plant = 0.03 mrem
-
         int choice, choice1, choice2, choice3, choice4;
-        int cigarettePackCount, xrayCount, ctCount, porcelainCount;
+
+        // INDIVIDUAL VARS
+        int cigarettePackCount, xrayCount, ctCount;
+        // per cigarette pack; 0.49 mrem
+        // Average CT scan = 500 mrem PER scan
+        // Average radiation per x-ray =  10 mrem PER scan
         
-        final double HOURLY_BACKGROUND_DOSE = 0.008; // uSv per hour at Kean University, map.safecast.org
+        // ENVIRONMENTAL VARS
         final double NJ_RADON_DOSE = 616.32; // mrem, radon level in the state of NJ
+        final double FIRE_DETECTOR = 0.008; 
+        final double PORCELAIN_CROWNS = 0.07;
+        final double ELEVATION_DOSE = 2;
+        final double NPP_RADIUS = 0.009;
+        final double CPP_RADIUS = 0.03;
+        final double FOOD_WATER_DOSE = 40;
         
         String logo = "\n╔═══╗────╔╗───╔╗────────╔═══╗──╔╗──────╔╗───╔╗\n" +
                         "║╔═╗║────║║──╔╝╚╗───────║╔═╗║──║║──────║║──╔╝╚╗\n" +
@@ -37,6 +40,7 @@ public class RadiationCalculator {
         choice = input.nextInt();
 
         switch (choice) { // breaks out to separate conditions and submenus
+
             case 1:
                 // menu 1
                 System.out.println("===================================================\n");
@@ -105,6 +109,7 @@ public class RadiationCalculator {
                                  + "  accurate. Answer to the best of your ability, \n"
                                  + "          using integer answers only.\n");
                 System.out.println("=================================================\n");
+                System.out.println("1.) How many packs of cigarettes do you smoke a day? (If none, enter 0.)")
                 break;
 
             default:
