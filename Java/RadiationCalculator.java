@@ -7,21 +7,29 @@ public class RadiationCalculator {
         Scanner input = new Scanner(System.in);
 
         int choice, choice1, choice2, choice3, choice4;
+        double envSum;
 
-        // INDIVIDUAL VARS
+        // INDIVIDUAL VARS: User will specify how many of each var to be summed.
         int cigarettePackCount, xrayCount, ctCount;
-        // per cigarette pack; 0.49 mrem
-        // Average CT scan = 500 mrem PER scan
-        // Average radiation per x-ray =  10 mrem PER scan
         
-        // ENVIRONMENTAL VARS
-        final double NJ_RADON_DOSE = 616.32; // mrem, radon level in the state of NJ
+        // ENVIRONMENTAL VARS: Background radiation doses from just living in NJ + environmental terrain and objects.
+        final double NJ_RADON_DOSE = 616.32;
         final double FIRE_DETECTOR = 0.008; 
-        final double PORCELAIN_CROWNS = 0.07;
         final double ELEVATION_DOSE = 2;
         final double NPP_RADIUS = 0.009;
         final double CPP_RADIUS = 0.03;
         final double FOOD_WATER_DOSE = 40;
+
+        final double CONST_CIGARETTE = 0.49;
+        final double CONST_XRAY = 10;
+        final double CONST_CT = 500;
+
+        double cigSum, xraySum, ctSum;
+        double finalSum;
+        double miliSievert;
+        
+        // Environmental variable that is summed to user input no matter what. 
+        envSum = NJ_RADON_DOSE + FIRE_DETECTOR + ELEVATION_DOSE + NPP_RADIUS + CPP_RADIUS + FOOD_WATER_DOSE;
         
         String logo = "\n╔═══╗────╔╗───╔╗────────╔═══╗──╔╗──────╔╗───╔╗\n" +
                         "║╔═╗║────║║──╔╝╚╗───────║╔═╗║──║║──────║║──╔╝╚╗\n" +
@@ -30,6 +38,7 @@ public class RadiationCalculator {
                         "║║║╚╣╔╗║╚╝║║╔╗║╚╣║╚╝║║║║║╚═╝║╔╗║╚╣╚═╣╚╝║╚╣╔╗║╚╣╚╝║║\n" +
                         "╚╝╚═╩╝╚╩══╩╩╝╚╩═╩╩══╩╝╚╝╚═══╩╝╚╩═╩══╩══╩═╩╝╚╩═╩══╩╝\n\n";
         
+        System.out.println("CPS 1231 Radiation Education + Simple Calculator Project");
         System.out.print(logo);
         System.out.println("===================================================\n");
         System.out.println("            Select an option from 1-3.\n");
@@ -107,9 +116,25 @@ public class RadiationCalculator {
                                  + "  values assume that you live in NJ and nearby\n"
                                  + "  Kean University, so this may not be totally\n"
                                  + "  accurate. Answer to the best of your ability, \n"
-                                 + "          using integer answers only.\n");
+                                 + "          using integer answers only.\n\n"
+                                 + " A final calculation and info about radiation will"
+                                 + "            be given to you. Enjoy!");
                 System.out.println("=================================================\n");
-                System.out.println("1.) How many packs of cigarettes do you smoke a day? (If none, enter 0.)")
+
+                System.out.println("1.) How many packs of cigarettes do you smoke a day? (If none, enter 0.)");
+                cigarettePackCount = input.nextInt();
+                cigSum = (cigarettePackCount * CONST_CIGARETTE) * 365; // calculates years worth of radiation
+
+                System.out.println("2.) How many x-rays did you have this past year? (If none, enter 0.)");
+                xrayCount = input.nextInt();
+                xraySum = xrayCount * CONST_XRAY;
+
+                System.out.println("3.) How many CT scans did you have this past year? (If none, enter 0.)");
+                ctCount = input.nextInt();
+                ctSum = ctCount * CONST_CT;
+
+                finalSum = cigSum + xraySum + ctSum + envSum;
+
                 break;
 
             default:
