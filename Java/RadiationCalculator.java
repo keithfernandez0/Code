@@ -6,7 +6,7 @@ public class RadiationCalculator {
 
         Scanner input = new Scanner(System.in);
 
-        int choice, choice1, choice2, choice3, choice4;
+        int choice, choice1;
         double envSum;
 
         // INDIVIDUAL VARS: User will specify how many of each var to be summed.
@@ -26,7 +26,7 @@ public class RadiationCalculator {
 
         double cigSum, xraySum, ctSum;
         double finalSum;
-        double miliSievert;
+        double microSievert;
         
         // Environmental variable that is summed to user input no matter what. 
         envSum = NJ_RADON_DOSE + FIRE_DETECTOR + ELEVATION_DOSE + NPP_RADIUS + CPP_RADIUS + FOOD_WATER_DOSE;
@@ -44,6 +44,7 @@ public class RadiationCalculator {
         System.out.println("            Select an option from 1-3.\n");
         System.out.println("            [1] ~ Isotope information");
         System.out.println("            [2] ~ EPA Radiation calculator\n");
+        System.out.println("            [3] ~ Links to media/data\n");
         System.out.println("===================================================\n");
 
         choice = input.nextInt();
@@ -134,12 +135,42 @@ public class RadiationCalculator {
                 ctSum = ctCount * CONST_CT;
 
                 finalSum = cigSum + xraySum + ctSum + envSum;
+                microSievert = finalSum * 10; // unit conversion
+
+                System.out.println("FINAL YEARLY ESTIMATED DOSE: " + finalSum + " mili-rem, and " + microSievert + " micro-Sieverts.\n");
+
+                System.out.println("Reference:");
+                System.out.println("0.1 micro-Sievert = radiation from eating a banana.");
+                System.out.println("5 micro-Sieverts = dose from getting a dental x-ray.");
+                System.out.println("50 micro-Sieverts = dose from spending one hour on the ground at Chernobyl in 2010.");
+                System.out.println("100 micro-Sieverts = dose from getting a chest x-ray.");
+                System.out.println("400 micro-Sieverts = dose from getting a mammogram.");
+                System.out.println("1,000 micro-Sieverts = US government yearly limit on artificial radiation exposure to the public.");
+                System.out.println("10,000 micro-Sieverts = dose from an average CT scan");
+                System.out.println("50,000 micro-Sieverts = yearly maximum dose for US radiation workers");
+                System.out.println("250,000 micro-Sieverts = dose limit for US radiation workers in life-saving operations");
+                System.out.println("1,000,000 micro-Sieverts = non-fatal radiation sickness, nausea and low blood cell count");
+                System.out.println("2,000,000 micro-Sieverts = high energy targeted dose in radiotherapy");
+                System.out.println("4,000,000 micro-Sieverts = severe dose, bleeding / hair-loss, death within 4-6 weeks if untreated.");
+                System.out.println("6,000,000 micro-Sieverts = typically fatal in 2-4 weeks if untreated");
+                System.out.println("10,000,000 micro-Sieverts = fatal dose, death within 2 weeks.");
+                System.out.println("30,000,000 micro-Sieverts = seizures and tremors, death within 48 hours.");
+                System.out.println("50,000,000 micro-Sieverts = 10 minutes exposure to Chernobyl reactor core after meltdown.");
 
                 break;
+            
+            case 3: 
+                System.out.println("\nLink list:");
+                System.out.println("1. Pulitzer Prize Winner in Investigative Journalism: *The Plutonium Files* by Eileen Welsome");
+                System.out.println("https://ia803202.us.archive.org/16/items/1999-ew-the-plutonium-files/1999%20EW%20The%20Plutonium%20Files.pdf\n");
+                System.out.println("2. Radiation Dosage Chart, *InformationIsBeautiful.net*");
+                System.out.println("https://www.informationisbeautiful.net/visualizations/radiation-dosage-chart/\n");
 
             default:
                 System.out.println("Not a valid input!\nSystem exit status [1].");
                 System.exit(1);
+
+
         }
     }
 }
