@@ -8,10 +8,12 @@ public class RadiationCalculator {
 
         // Average radiation per x-ray =  10 mrem
         // Elevation radiation at Kean = 2 mrem
-        // 
+        // Average CT scan = 500 mrem
+        // Pocelain teeth (y/n) = 0.07 mrem
+        // Fire detector = 0.008 mrem
 
-        int choice;
-        int cigarettePackCount, xrayCount, ctCount, 
+        int choice, choice1, choice2, choice3, choice4;
+        int cigarettePackCount, xrayCount, ctCount, porcelainCount;// Simplified EPA model of yearly radiation absorbed
         final double backgroundHourlyDoseRem = 0.008; // uSv per hour at Kean University, map.safecast.org
         final double radonDoseNJRem = 616.32; // mrem, radon level in the state of NJ
         
@@ -37,7 +39,7 @@ public class RadiationCalculator {
                 System.out.println("===================================================\n");
                 System.out.println("            Select an option from 1-3.\n");
                 System.out.println("            [1] ~ Uranium-235");
-                System.out.println("            [2] ~ Americium-")
+                System.out.println("            [2] ~ Americium-");
                 break;
             case 2: 
                 break;
