@@ -28,18 +28,32 @@ public class RadiationCalculator {
         System.out.println("===================================================\n");
         System.out.println("            Select an option from 1-3.\n");
         System.out.println("            [1] ~ Isotope information");
-        System.out.println("            [2] ~ EPA Radiation calculator");
-        System.out.println("            [3] ~ Blast radius calc.\n");
+        System.out.println("            [2] ~ EPA Radiation calculator\n");
         System.out.println("===================================================\n");
 
         choice = input.nextInt();
 
         switch (choice) { // breaks out to separate conditions and submenus
             case 1:
+
                 System.out.println("===================================================\n");
                 System.out.println("            Select an option from 1-3.\n");
                 System.out.println("            [1] ~ Uranium-235");
-                System.out.println("            [2] ~ Americium-");
+                System.out.println("            [2] ~ Americium-241");
+                System.out.println("            [3] ~ Cobalt-60");
+                System.out.println("            [4] ~ Plutonium-241\n");
+                System.out.println("===================================================\n");
+
+                choice1 = input.nextInt();
+                switch (choice1) {
+                    case 1:
+                    case 2:
+                    case 3:
+                    case 4:
+                    default:
+
+                }
+
                 break;
             case 2: 
                 break;
