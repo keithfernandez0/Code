@@ -15,9 +15,10 @@ public class RadiationCalculator {
         // Living within radius of coal plant = 0.03 mrem
 
         int choice, choice1, choice2, choice3, choice4;
-        int cigarettePackCount, xrayCount, ctCount, porcelainCount;// Simplified EPA model of yearly radiation absorbed
-        final double backgroundHourlyDoseRem = 0.008; // uSv per hour at Kean University, map.safecast.org
-        final double radonDoseNJRem = 616.32; // mrem, radon level in the state of NJ
+        int cigarettePackCount, xrayCount, ctCount, porcelainCount;
+        
+        final double HOURLY_BACKGROUND_DOSE = 0.008; // uSv per hour at Kean University, map.safecast.org
+        final double NJ_RADON_DOSE = 616.32; // mrem, radon level in the state of NJ
         
         String logo = "\n╔═══╗────╔╗───╔╗────────╔═══╗──╔╗──────╔╗───╔╗\n" +
                         "║╔═╗║────║║──╔╝╚╗───────║╔═╗║──║║──────║║──╔╝╚╗\n" +
@@ -86,16 +87,26 @@ public class RadiationCalculator {
                                          + "https://ia803202.us.archive.org/16/items/1999-ew-the-plutonium-files/1999%20EW%20The%20Plutonium%20Files.pdf\n");
 
                         break;
-                        
+
                     default:
                         System.out.println("Not a valid input!\nSystem exit status [1].");
                         System.exit(1);
-
                 }
 
                 break;
+
             case 2: // yearly "test", some paramenters are hardset for living at Kean NJ
+                System.out.println("===================================================\n");
+                System.out.println(" This is meant to serve as a shortened, simple test\n"
+                                 + "  adapted from the EPA.gov website regarding your\n"
+                                 + "  estimated yearly exposure to radiation. Some\n"
+                                 + "  values assume that you live in NJ and nearby\n"
+                                 + "  Kean University, so this may not be totally\n"
+                                 + "  accurate. Answer to the best of your ability, \n"
+                                 + "          using integer answers only.\n");
+                System.out.println("=================================================\n");
                 break;
+
             default:
                 System.out.println("Not a valid input!\nSystem exit status [1].");
                 System.exit(1);
