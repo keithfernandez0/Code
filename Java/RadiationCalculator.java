@@ -1,10 +1,11 @@
 package Java;
 import java.util.Scanner;
+import java.lang.Math;
 
 public class RadiationCalculator {
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in); 
 
         int choice, choice1;
         double envSum;
@@ -27,6 +28,24 @@ public class RadiationCalculator {
         double cigSum, xraySum, ctSum;
         double finalSum;
         double microSievert;
+
+        // Vars for caluculating radioactive decay half-life
+        // N(t) = m * e ^ (-t/T) function for telling how much radioactive material
+        // remains after a time t
+
+        // Python Code adapted to Java: GitHub user tdjsnelling
+        // https://github.com/tdjsnelling/radioactive-decay/blob/master/radioactive-decay.py
+
+        // t = user input time (sec)
+        // T = time constant (sec)
+        // m = initial mass in kilograms
+
+        // while-loop of t seconds : N(t) mapped
+
+        double initMassKilos, timeElapsed;
+        int atomsRemaining, atoms; 
+
+        final int TIME_CONST_C10 = 19;
         
         // Environmental variable that is summed to user input no matter what. 
         envSum = NJ_RADON_DOSE + FIRE_DETECTOR + ELEVATION_DOSE + NPP_RADIUS + CPP_RADIUS + FOOD_WATER_DOSE;
@@ -38,14 +57,15 @@ public class RadiationCalculator {
                         "║║║╚╣╔╗║╚╝║║╔╗║╚╣║╚╝║║║║║╚═╝║╔╗║╚╣╚═╣╚╝║╚╣╔╗║╚╣╚╝║║\n" +
                         "╚╝╚═╩╝╚╩══╩╩╝╚╩═╩╩══╩╝╚╝╚═══╩╝╚╩═╩══╩══╩═╩╝╚╩═╩══╩╝\n\n";
         
-        System.out.println("Keith Fernandez, Jason Zaruma, Ayman Rashiel, James Hernandez");                
-        System.out.println("CPS 1231 Radiation Education + Simple EPA Calculator Project");
+        System.out.println("\nKeith Fernandez, Jason Zaruma, Ayman Rashiel, James Hernandez");                
+        System.out.println("[CPS 1231 Radiation Education + Simple EPA Calculator Project]");
         System.out.print(logo);
         System.out.println("===================================================\n");
         System.out.println("            Select an option from 1-3.\n");
         System.out.println("            [1] ~ Isotope information");
         System.out.println("            [2] ~ EPA Radiation calculator");
-        System.out.println("            [3] ~ Links to media + data\n");
+        System.out.println("            [3] ~ Links to media + data");
+        System.out.println("            [4] ~ Carbon-10 Decay calculator\n");
         System.out.println("===================================================\n");
 
         choice = input.nextInt();
@@ -140,7 +160,7 @@ public class RadiationCalculator {
 
                 System.out.println("\nFINAL YEARLY ESTIMATED DOSE: " + finalSum + " mili-rem, and " + microSievert + " micro-Sieverts.\n");
 
-                System.out.println("Reference:");
+                System.out.println("Reference Dose Chart:");
                 System.out.println("===================================================\n");
                 System.out.println("1.) 0.1 micro-Sievert = radiation from eating a banana.");
                 System.out.println("2.) 5 micro-Sieverts = dose from getting a dental x-ray.");
@@ -148,13 +168,13 @@ public class RadiationCalculator {
                 System.out.println("4.) 100 micro-Sieverts = dose from getting a chest x-ray.");
                 System.out.println("5.) 400 micro-Sieverts = dose from getting a mammogram.");
                 System.out.println("6.) 1,000 micro-Sieverts = US government yearly limit on artificial radiation exposure to the public.");
-                System.out.println("7.) 10,000 micro-Sieverts = dose from an average CT scan");
-                System.out.println("8.) 50,000 micro-Sieverts = yearly maximum dose for US radiation workers");
-                System.out.println("9.) 250,000 micro-Sieverts = dose limit for US radiation workers in life-saving operations");
-                System.out.println("10.) 1,000,000 micro-Sieverts = non-fatal radiation sickness, nausea and low blood cell count");
-                System.out.println("11.) 2,000,000 micro-Sieverts = high energy targeted dose in radiotherapy");
+                System.out.println("7.) 10,000 micro-Sieverts = dose from an average CT scan.");
+                System.out.println("8.) 50,000 micro-Sieverts = yearly maximum dose for US radiation workers.");
+                System.out.println("9.) 250,000 micro-Sieverts = dose limit for US radiation workers in life-saving operations.");
+                System.out.println("10.) 1,000,000 micro-Sieverts = non-fatal radiation sickness, nausea and low blood cell count.");
+                System.out.println("11.) 2,000,000 micro-Sieverts = high energy targeted dose in radiotherapy.");
                 System.out.println("12.) 4,000,000 micro-Sieverts = severe dose, bleeding / hair-loss, death within 4-6 weeks if untreated.");
-                System.out.println("13.) 6,000,000 micro-Sieverts = typically fatal in 2-4 weeks if untreated");
+                System.out.println("13.) 6,000,000 micro-Sieverts = typically fatal in 2-4 weeks if untreated.");
                 System.out.println("14.) 10,000,000 micro-Sieverts = fatal dose, death within 2 weeks.");
                 System.out.println("15.) 30,000,000 micro-Sieverts = seizures and tremors, death within 48 hours.");
                 System.out.println("16.) 50,000,000 micro-Sieverts = 10 minutes exposure to Chernobyl reactor core after meltdown.\n");
@@ -167,7 +187,13 @@ public class RadiationCalculator {
                 System.out.println("https://ia803202.us.archive.org/16/items/1999-ew-the-plutonium-files/1999%20EW%20The%20Plutonium%20Files.pdf\n");
                 System.out.println("2. Radiation Dosage Chart, *InformationIsBeautiful.net*");
                 System.out.println("https://www.informationisbeautiful.net/visualizations/radiation-dosage-chart/\n");
-                
+
+                break;
+
+            case 4: 
+                System.out.println("===================================================\n");
+                System.out.println("");
+                System.out.println("===================================================\n");
                 break;
 
             default:
