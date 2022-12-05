@@ -33,7 +33,7 @@ public class RadiationCalculator {
         // N(t) = m * e ^ (-t/T) function for telling how much radioactive material
         // remains after a time t
 
-        // Python Code adapted to Java: GitHub user tdjsnelling
+        // Python code adapted to Java: GitHub user tdjsnelling
         // https://github.com/tdjsnelling/radioactive-decay/blob/master/radioactive-decay.py
 
         // t = user input time (sec)
@@ -192,7 +192,7 @@ public class RadiationCalculator {
 
             case 4: 
                 System.out.println("===================================================\n");
-                System.out.println("");
+                System.out.println("                ");
                 System.out.println("===================================================\n");
                 break;
 
