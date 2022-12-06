@@ -40,8 +40,6 @@ public class RadiationCalculator {
         // T = time constant (sec)
         // m = initial mass in kilograms
 
-        // while-loop of t seconds : N(t) mapped
-
         int timeElapsed;
         int atomsRemaining, atoms;
 
