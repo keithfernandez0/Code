@@ -44,7 +44,6 @@ public class RadiationCalculator {
 
         int timeElapsed;
         int atomsRemaining, atoms;
-        int index = 0; 
 
         final int HALFLIFE_CONST = 19;
 
@@ -151,11 +150,11 @@ public class RadiationCalculator {
                 cigarettePackCount = input.nextInt();
                 cigSum = (cigarettePackCount * CONST_CIGARETTE) * 365; // calculates years worth of radiation
 
-                System.out.println("2.) How many x-rays did you have this past year? (If none, enter 0.)");
+                System.out.println("\n2.) How many x-rays did you have this past year? (If none, enter 0.)");
                 xrayCount = input.nextInt();
                 xraySum = xrayCount * CONST_XRAY;
 
-                System.out.println("3.) How many CT scans did you have this past year? (If none, enter 0.)");
+                System.out.println("\n3.) How many CT scans did you have this past year? (If none, enter 0.)");
                 ctCount = input.nextInt();
                 ctSum = ctCount * CONST_CT;
 
