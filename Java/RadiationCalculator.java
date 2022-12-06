@@ -42,10 +42,13 @@ public class RadiationCalculator {
 
         // while-loop of t seconds : N(t) mapped
 
-        double initMassKilos, timeElapsed;
+        int timeElapsed;
         int atomsRemaining, atoms; 
 
-        final int DECAY_CONST_C10 = 19;
+        final int HALFLIFE_CONST = 19;
+
+        // λ = ln(2) / t (half)
+        final double decayRate = Math.log(2) / HALFLIFE_CONST;
         
         // Environmental variable that is summed to user input no matter what. 
         envSum = NJ_RADON_DOSE + FIRE_DETECTOR + ELEVATION_DOSE + NPP_RADIUS + CPP_RADIUS + FOOD_WATER_DOSE;
@@ -206,9 +209,12 @@ public class RadiationCalculator {
                 System.out.println("Please enter the number of Carbon-10 atoms to start. (Integer answers only.)");
                 atoms = input.nextInt();
                 atomsRemaining = atoms;
+
+                System.out.println("Please enter the time in seconds you wish to simulate half-life decay.");
                 
                 while (atomsRemaining > 0) {
 
+                    atomsRemaining = (int)(atoms * Math.exp(-DECAY_CONST_C10, timeElapsed));
                 }
                 break;
 
