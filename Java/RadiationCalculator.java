@@ -43,12 +43,13 @@ public class RadiationCalculator {
         // while-loop of t seconds : N(t) mapped
 
         int timeElapsed;
-        int atomsRemaining, atoms; 
+        int atomsRemaining, atoms;
+        int index = 0; 
 
         final int HALFLIFE_CONST = 19;
 
         // λ = ln(2) / t (half)
-        final double decayRate = Math.log(2) / HALFLIFE_CONST;
+        final double DECAY_RATE = Math.log(2) / HALFLIFE_CONST; // d
         
         // Environmental variable that is summed to user input no matter what. 
         envSum = NJ_RADON_DOSE + FIRE_DETECTOR + ELEVATION_DOSE + NPP_RADIUS + CPP_RADIUS + FOOD_WATER_DOSE;
@@ -64,10 +65,10 @@ public class RadiationCalculator {
         System.out.println("[CPS 1231 Radiation Education + Simple EPA Calculator Project]");
         System.out.print(logo);
         System.out.println("===================================================\n");
-        System.out.println("            Select an option from 1-3.\n");
+        System.out.println("            Select an option from 1-4.\n");
         System.out.println("            [1] ~ Isotope information");
         System.out.println("            [2] ~ EPA Radiation calculator");
-        System.out.println("            [3] ~ Links to media + data");
+        System.out.println("            [3] ~ Links + credits");
         System.out.println("            [4] ~ Carbon-10 Decay calculator\n");
         System.out.println("===================================================\n");
 
@@ -78,7 +79,7 @@ public class RadiationCalculator {
             case 1:
                 // menu 1
                 System.out.println("===================================================\n");
-                System.out.println("            Select an option from 1-3.\n");
+                System.out.println("            Select an option from 1-4.\n");
                 System.out.println("            [1] ~ Uranium-235");
                 System.out.println("            [2] ~ Americium-241");
                 System.out.println("            [3] ~ Cobalt-60");
@@ -185,11 +186,13 @@ public class RadiationCalculator {
                 break;
             
             case 3: 
-                System.out.println("\nLink list:");
-                System.out.println("1. Pulitzer Prize Winner in Investigative Journalism: *The Plutonium Files* by Eileen Welsome");
+                System.out.println("\nLink list:\n");
+                System.out.println("1.) Pulitzer Prize Winner in Investigative Journalism: *The Plutonium Files* by Eileen Welsome");
                 System.out.println("https://ia803202.us.archive.org/16/items/1999-ew-the-plutonium-files/1999%20EW%20The%20Plutonium%20Files.pdf\n");
-                System.out.println("2. Radiation Dosage Chart, *InformationIsBeautiful.net*");
+                System.out.println("2.) Radiation Dosage Chart, *InformationIsBeautiful.net*");
                 System.out.println("https://www.informationisbeautiful.net/visualizations/radiation-dosage-chart/\n");
+                System.out.println("3.) Python implementation of half-life radioactive decay equation (Github User: tdjsnelling)");
+                System.out.println("https://github.com/tdjsnelling/radioactive-decay/blob/master/radioactive-decay.py\n");
 
                 break;
 
@@ -210,12 +213,20 @@ public class RadiationCalculator {
                 atoms = input.nextInt();
                 atomsRemaining = atoms;
 
-                System.out.println("Please enter the time in seconds you wish to simulate half-life decay.");
-                
-                while (atomsRemaining > 0) {
+                System.out.println("\nPlease enter the time in seconds you wish to simulate half-life decay.");
+                timeElapsed = input.nextInt();
 
-                    atomsRemaining = (int)(atoms * Math.exp(-DECAY_CONST_C10, timeElapsed));
+                System.out.println("\nTime (s)       Starting atoms: " + atoms);
+                System.out.println("===================================================\n");
+
+                for (int i = 1; i <= timeElapsed; i++) {
+                    // N = N0 * e ^ (-λt)
+                    atomsRemaining = atoms - (int)(atoms * Math.exp(-DECAY_RATE * i));
+    
+                    System.out.println(i+" second(s)  ::  Atoms Remaining: " + (atoms - atomsRemaining));
                 }
+                System.out.print("\n");
+
                 break;
 
             default:

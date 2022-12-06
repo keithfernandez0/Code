@@ -6,6 +6,13 @@
             "name": "Launch RadiationCalculator",
             "request": "launch",
             "mainClass": "Java.RadiationCalculator",
+            "projectName": "Code_1ff7ded2"
+        },
+        {
+            "type": "java",
+            "name": "Launch RadiationCalculator",
+            "request": "launch",
+            "mainClass": "Java.RadiationCalculator",
             "projectName": "Code_2257536c"
         },
         {
