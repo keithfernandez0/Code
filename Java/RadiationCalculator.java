@@ -45,7 +45,7 @@ public class RadiationCalculator {
         double initMassKilos, timeElapsed;
         int atomsRemaining, atoms; 
 
-        final int TIME_CONST_C10 = 19;
+        final int DECAY_CONST_C10 = 19;
         
         // Environmental variable that is summed to user input no matter what. 
         envSum = NJ_RADON_DOSE + FIRE_DETECTOR + ELEVATION_DOSE + NPP_RADIUS + CPP_RADIUS + FOOD_WATER_DOSE;
@@ -192,8 +192,24 @@ public class RadiationCalculator {
 
             case 4: 
                 System.out.println("===================================================\n");
-                System.out.println("                ");
+                System.out.println("       Carbon-10 is a radioactive isotope with");
+                System.out.println("            a half-life of ~19 seconds.\n");
+                System.out.println("       The half-life of a radionucleotide is");
+                System.out.println("       defined by the amount of time needed");
+                System.out.println("        for 50% of the initial radioactive");
+                System.out.println("                 mass to decay off.\n");
+                System.out.println("       This can mathematically defined as a");
+                System.out.println("                 function of time:\n");
+                System.out.println("               N(t) = n * e ^ (-λt)\n");
                 System.out.println("===================================================\n");
+                
+                System.out.println("Please enter the number of Carbon-10 atoms to start. (Integer answers only.)");
+                atoms = input.nextInt();
+                atomsRemaining = atoms;
+                
+                while (atomsRemaining > 0) {
+
+                }
                 break;
 
             default:
