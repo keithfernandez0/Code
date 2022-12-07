@@ -141,7 +141,7 @@ public class RadiationCalculator {
                                  + "  accurate. Answer to the best of your ability, \n"
                                  + "          using integer answers only.\n\n"
                                  + " A final calculation and info about radiation will\n"
-                                 + "            be given to you. Enjoy!");
+                                 + "            be given to you. Enjoy!\n");
                 System.out.println("=================================================\n");
 
                 System.out.println("1.) How many packs of cigarettes do you smoke a day? (If none, enter 0.)");
@@ -220,7 +220,7 @@ public class RadiationCalculator {
                     // N = N0 * e ^ (-λt)
                     atomsRemaining = atoms - (int)(atoms * Math.exp(-DECAY_RATE * i));
     
-                    System.out.println(i+" second(s)  ::  Atoms Remaining: " + (atoms - atomsRemaining));
+                    System.out.println(i+" second(s)  -::-  Atoms Remaining: " + (atoms - atomsRemaining));
                 }
                 System.out.print("\n");
 
