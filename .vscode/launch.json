@@ -3,6 +3,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch LoopMethod",
+            "request": "launch",
+            "mainClass": "Java.LoopMethod",
+            "projectName": "Code_2257536c"
+        },
+        {
+            "type": "java",
+            "name": "Launch Test",
+            "request": "launch",
+            "mainClass": "Java.Test",
+            "projectName": "Code_2257536c"
+        },
+        {
+            "type": "java",
+            "name": "Launch UsingMethod",
+            "request": "launch",
+            "mainClass": "Java.UsingMethod",
+            "projectName": "Code_2257536c"
+        },
+        {
+            "type": "java",
             "name": "Launch AnalyzeNumbers",
             "request": "launch",
             "mainClass": "Java.AnalyzeNumbers",
