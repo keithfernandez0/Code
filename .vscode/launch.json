@@ -3,6 +3,7 @@
     "configurations": [
         {
             "type": "java",
+<<<<<<< HEAD
             "name": "Launch LoopMethod",
             "request": "launch",
             "mainClass": "Java.LoopMethod",
@@ -28,6 +29,12 @@
             "request": "launch",
             "mainClass": "Java.AnalyzeNumbers",
             "projectName": "Code_2257536c"
+=======
+            "name": "Launch RadioactiveDecay",
+            "request": "launch",
+            "mainClass": "Java.RadioactiveDecay",
+            "projectName": "Code_1ff7ded2"
+>>>>>>> 4aad2b7 ( Changes to be committed:)
         },
         {
             "type": "java",
