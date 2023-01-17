@@ -163,15 +163,15 @@ public class RadiationCalculator {
 
                 System.out.println("Reference Dose Chart:");
                 System.out.println("===================================================\n");
-                System.out.println("1.) 0.1 micro-Sievert = radiation from eating a banana.");
-                System.out.println("2.) 5 micro-Sieverts = dose from getting a dental x-ray.");
-                System.out.println("3.) 50 micro-Sieverts = dose from spending one hour on the ground at Chernobyl in 2010.");
-                System.out.println("4.) 100 micro-Sieverts = dose from getting a chest x-ray.");
-                System.out.println("5.) 400 micro-Sieverts = dose from getting a mammogram.");
-                System.out.println("6.) 1,000 micro-Sieverts = US government yearly limit on artificial radiation exposure to the public.");
-                System.out.println("7.) 10,000 micro-Sieverts = dose from an average CT scan.");
-                System.out.println("8.) 50,000 micro-Sieverts = yearly maximum dose for US radiation workers.");
-                System.out.println("9.) 250,000 micro-Sieverts = dose limit for US radiation workers in life-saving operations.");
+                System.out.println("1.)  0.1 micro-Sievert = radiation from eating a banana.");
+                System.out.println("2.)  5 micro-Sieverts = dose from getting a dental x-ray.");
+                System.out.println("3.)  50 micro-Sieverts = dose from spending one hour on the ground at Chernobyl in 2010.");
+                System.out.println("4.)  100 micro-Sieverts = dose from getting a chest x-ray.");
+                System.out.println("5.)  400 micro-Sieverts = dose from getting a mammogram.");
+                System.out.println("6.)  1,000 micro-Sieverts = US government yearly limit on artificial radiation exposure to the public.");
+                System.out.println("7.)  10,000 micro-Sieverts = dose from an average CT scan.");
+                System.out.println("8.)  50,000 micro-Sieverts = yearly maximum dose for US radiation workers.");
+                System.out.println("9.)  250,000 micro-Sieverts = dose limit for US radiation workers in life-saving operations.");
                 System.out.println("10.) 1,000,000 micro-Sieverts = non-fatal radiation sickness, nausea and low blood cell count.");
                 System.out.println("11.) 2,000,000 micro-Sieverts = high energy targeted dose in radiotherapy.");
                 System.out.println("12.) 4,000,000 micro-Sieverts = severe dose, bleeding / hair-loss, death within 4-6 weeks if untreated.");
