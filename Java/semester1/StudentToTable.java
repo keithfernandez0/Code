@@ -21,7 +21,7 @@ public class StudentToTable {
 
         char grade1 = 'C';
         char grade2 = 'B';
-        char grade3 = 'G';
+        char grade3 = 'A';
 
         int bonus1 = 7;
         int bonus2 = 8;
