@@ -7,21 +7,33 @@ public class twoDimensionalMatrix {
     
         for (int i = 0; i < matrix.length; i++) 
         {
-            System.out.println("*OUTER* loop count [i]: " + i);
             for (int j = 0; j < matrix[i].length; j++) 
             {
                 matrix[i][j] = (int)(Math.random() * 100);
-                System.out.println("*INNER* loop count [j]: " + j);
             }
         }
 
         for (int row = 0; row < matrix.length; row++) {
-            System.out.println("Outer loop count [row]: " + row);
             for (int col = 0; col < matrix[row].length; col++) {
                 System.out.println(matrix[row][col] + "|");
-                System.out.println("Inner loop count [col]: " + col);
             }
             System.out.println();
+        }
+
+        int sumByRow = 0;
+        int mat[][] = {
+                        {3,1,2},
+                        {6,1,5},
+                        {7,9,3},
+                        {8,3,2}
+        };
+
+        for (int row = 0; row < mat.length; row++) {
+            for (int col = 0; col < mat[row].length; col++) {
+                sumByRow += mat[row][col];
+            }
+            System.out.println("Sum of elements in row: "+row+" "+sumByRow);
+            sumByRow = 0;
         }
     }
 }
