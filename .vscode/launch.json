@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch StudentInformation",
+            "request": "launch",
+            "mainClass": "semester2.StudentInformation",
+            "projectName": "Code_918d8862"
+        },
+        {
+            "type": "java",
             "name": "Launch singleDimensionArray",
             "request": "launch",
             "mainClass": "semester2.arrays.singleDimensionArray",
