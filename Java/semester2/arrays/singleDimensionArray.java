@@ -66,6 +66,21 @@ public class singleDimensionArray {
 
         // ===============================================================
 
+        char[] sample = {'D', 'G', 'S', 'A', 'C'};
+
+        for (int i = 0; i < sample.length; i++) {
+            int j = (int)(Math.random() * sample.length);
+            char tmp = sample[i];
+            sample[i] = sample[j];
+            sample[j] = tmp;
+
+            System.out.println("Char: " + sample[i] + "  i: " + i + "   tmp: " + tmp);
+        }
+
+        System.out.println("");
+
+        // ===============================================================
+
         int[] arr = new int[6];
         
         // Generate random values for the array
@@ -90,7 +105,7 @@ public class singleDimensionArray {
         // Search for the number in the array
         int result = Arrays.binarySearch(arr, number);
         if (result >= 0) {
-            System.out.println("Your number is present.");
+            System.out.println("Your number is present!");
         } 
         else {
             System.out.println("Your number is not present!");
