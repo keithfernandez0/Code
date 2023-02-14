@@ -228,6 +228,7 @@ public class RadiationCalculator {
 
             default:
                 System.out.println("Not a valid input!\nSystem exit status [1].\n");
+                input.close();
                 System.exit(1);
 
         }

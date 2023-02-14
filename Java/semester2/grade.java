@@ -12,7 +12,7 @@ public class grade {
         String result = printGrade(score);
 
         System.out.println("Your letter grade is: " + result);
-        
+        input.close();
     }
 
     public static String printGrade(double score) {
@@ -50,6 +50,5 @@ public class grade {
         else {
             return "F";
         }
-
     }
 }
