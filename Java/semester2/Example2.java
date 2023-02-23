@@ -20,6 +20,15 @@ public class Example2 {
 		//changing the color of C2 to green
 		c2.setColorOfCircle(Color.GREEN);
 		System.out.println("Color of c2 "+c2.getColorOfCircle());
+
+		System.out.println("Number of objects in Circle class: " );
+
+		Circle[] objArray = new Circle[3]; // array of circle object
+
+		for (int i = 0; i < objArray.length; i++) 
+		{
+			objArray[i] = new Circle();
+		}
 		
 	}
 
