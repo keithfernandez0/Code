@@ -1,3 +1,13 @@
+/**************************************************************
+ * Kean University
+ * Spring 2023
+ * Course: CPS*2231 - Computer Programming in Java
+ * Author: Keith Michelangelo Fernandez, CPS*2231
+ * 
+ * HW Assignment 2
+ **************************************************************
+ */
+
 package semester2;
 
 import java.util.Random;
