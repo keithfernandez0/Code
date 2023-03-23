@@ -13,76 +13,64 @@ import java.util.Random;
 
 public class homework4 {
     public static void main(String[] args) {
-        // Part 1, A
-        double randomDouble = new Random().nextDouble() * (200 - 100) + 100;
-        Double doubleWrapper = randomDouble;
-        
-        // B
-        System.out.println("Double instance var as integer data type: " + doubleWrapper.intValue());
-        
-        // C
-        System.out.println("Double value as a float data type: " + doubleWrapper.floatValue());
-        
-        // D
-        System.out.println("Double value as a long data type: " + doubleWrapper.longValue());
-        
-        // E
-        String binaryString = "1110000";
-        double parsedBinaryDouble = Double.parseDouble(binaryString);
-        System.out.println("Parsed double value of " + binaryString + ": " + parsedBinaryDouble);
-        
-        // F
-        String hexadecimalString = "4B2A";
-        long parsedHexLong = Long.parseLong(hexadecimalString, 16);
-        double parsedHexDouble = Double.longBitsToDouble(parsedHexLong);
-        System.out.println("Parsed double value of " + hexadecimalString + ": " + parsedHexDouble);
 
-        // Part 2, A
-        String keanUniversity = "Kean University New Jersey";
+        // ========================================================================================
+        // SECTION 1: DOUBLE WRAPPER DATA READ-OUT + BIN/HEX CONVERSION
+        // ========================================================================================
+
+        double randDouble = new Random().nextDouble() * (200 - 100) + 100;
+        Double doubleWrapper = randDouble;
+
+        String binStr = "1110000";
+        double convertedBinDouble = Double.parseDouble(binStr);
+
+        String hexStr = "4B2A";
+        long convertedHexLong = Long.parseLong(hexStr, 16);
+        double convertedHexDouble = Double.longBitsToDouble(convertedHexLong);
         
-        // B
-        String newJerseySubstring = keanUniversity.substring(keanUniversity.indexOf("New Jersey"));
-        System.out.println("Substring 'New Jersey': " + newJerseySubstring);
+        System.out.println("Double instance as integer data value: " + doubleWrapper.intValue());
+        System.out.println("Double value as a float data value: " + doubleWrapper.floatValue());
+        System.out.println("Double value as a long data value: " + doubleWrapper.longValue());
         
-        // C
-        String keanUniversityWithDelimiters = "Kean#University$New:Jersey";
+        System.out.println("Converted double value of " + binStr + ": " + convertedBinDouble);
+        System.out.println("Converted double value of " + hexStr + ": " + convertedHexDouble);
+
+        // ========================================================================================
+        // SECTION 2: SUBSTRING + DELIMITER MANIPULATION
+        // ========================================================================================
+
+        String kean = "Kean University New Jersey";
+        String njSubStr = kean.substring(kean.indexOf("New Jersey"));
+        String keanWithDelim = "Kean#University$New:Jersey";
+        String[] splitStr = keanWithDelim.split("#|\\$|:");
+        String replacedDelim = keanWithDelim.replaceAll("#|:", " ");
+
+        System.out.println("Substring 'New Jersey': " + njSubStr);
+        System.out.println("Result of 'kean' and 'keanWithDelim': " + kean.equals(keanWithDelim));
         
-        // D
-        System.out.println("Result of 'keanUniversity' and 'keanUniversityWithDelimiters': " +
-                keanUniversity.equals(keanUniversityWithDelimiters));
-        
-        // E
-        String[] splitString = keanUniversityWithDelimiters.split("#|\\$|:");
         System.out.print("Split string: ");
-        for (String s : splitString) {
+
+        for (String s : splitStr) {
             System.out.print(s + " ");
         }
+
         System.out.println();
+        System.out.println("Replaced delimiters: " + replacedDelim);
+
+        // ========================================================================================
+        // SECTION 3: STRINGBUILDER OBJECT MANIPULATION
+        // ========================================================================================
         
-        // F
-        String replacedDelimiters = keanUniversityWithDelimiters.replaceAll("#|:", " ");
-        System.out.println("Replaced delimiters: " + replacedDelimiters);
-        
-        // Part 3, A
-        StringBuilder midtermExamStringBuilder = new StringBuilder("Prepare for your Midterm Exam");
-        
-        // B
-        System.out.println("Capacity of the StringBuilder: " + midtermExamStringBuilder.capacity());
-        
-        // C
-        int index = midtermExamStringBuilder.indexOf("y");
+        StringBuilder midtermSB = new StringBuilder("Prepare for your midterm exam");
+        int index = midtermSB.indexOf("y");
+    
+        System.out.println("Capacity of the StringBuilder: " + midtermSB.capacity());
         System.out.println("Index of the letter 'y': " + index);
         
-        // D
-        midtermExamStringBuilder.delete(0, index);
-        
-        // E
-        midtermExamStringBuilder.insert(0, "Good luck on ");
-        
-        // F
-        midtermExamStringBuilder.append('!');
-        
-        // G
-        System.out.println("Final StringBuilder: " + midtermExamStringBuilder);
+        midtermSB.delete(0, index);
+        midtermSB.insert(0, "Good luck on ");
+        midtermSB.append('!');
+    
+        System.out.println("Final StringBuilder: " + midtermSB);
     }
 }
