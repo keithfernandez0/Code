@@ -1,21 +1,30 @@
+/**************************************************************
+ * Kean University
+ * Spring 2023
+ * Course: CPS*2231 - Computer Programming in Java
+ * Author: Keith Michelangelo Fernandez, CPS*2231
+ * 
+ * HW Assignment 4
+ **************************************************************
+ */
+
 package semester2;
 import java.util.Random;
 
 public class homework4 {
     public static void main(String[] args) {
-        // Part 1
-        // A
+        // Part 1, A
         double randomDouble = new Random().nextDouble() * (200 - 100) + 100;
         Double doubleWrapper = randomDouble;
         
         // B
-        System.out.println("Double instance value as an int: " + doubleWrapper.intValue());
+        System.out.println("Double instance var as integer data type: " + doubleWrapper.intValue());
         
         // C
-        System.out.println("Double value as a float: " + doubleWrapper.floatValue());
+        System.out.println("Double value as a float data type: " + doubleWrapper.floatValue());
         
         // D
-        System.out.println("Double value as a long: " + doubleWrapper.longValue());
+        System.out.println("Double value as a long data type: " + doubleWrapper.longValue());
         
         // E
         String binaryString = "1110000";
@@ -28,8 +37,7 @@ public class homework4 {
         double parsedHexDouble = Double.longBitsToDouble(parsedHexLong);
         System.out.println("Parsed double value of " + hexadecimalString + ": " + parsedHexDouble);
 
-        // Part 2
-        // A
+        // Part 2, A
         String keanUniversity = "Kean University New Jersey";
         
         // B
@@ -40,7 +48,7 @@ public class homework4 {
         String keanUniversityWithDelimiters = "Kean#University$New:Jersey";
         
         // D
-        System.out.println("Comparison result of 'keanUniversity' and 'keanUniversityWithDelimiters': " +
+        System.out.println("Result of 'keanUniversity' and 'keanUniversityWithDelimiters': " +
                 keanUniversity.equals(keanUniversityWithDelimiters));
         
         // E
@@ -55,8 +63,7 @@ public class homework4 {
         String replacedDelimiters = keanUniversityWithDelimiters.replaceAll("#|:", " ");
         System.out.println("Replaced delimiters: " + replacedDelimiters);
         
-        // Part 3
-        // A
+        // Part 3, A
         StringBuilder midtermExamStringBuilder = new StringBuilder("Prepare for your Midterm Exam");
         
         // B

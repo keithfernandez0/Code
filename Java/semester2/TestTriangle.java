@@ -1,24 +1,35 @@
+/**************************************************************
+ * Kean University
+ * Spring 2023
+ * Course: CPS*2231 - Computer Programming in Java
+ * Author: Keith Michelangelo Fernandez, CPS*2231
+ * 
+ * HW Assignment 3
+ **************************************************************
+ */
+
 package semester2;
 import java.util.Random;
 
 public class TestTriangle {
     public static void main(String[] args) {
-        // Create two Triangle objects
+        
+        // create new objects
         Triangle triangle1 = new Triangle();
         Triangle triangle2 = new Triangle(3, 4, 5);
 
-        // Print the contents of both objects using toString() method
+        // print contents of both objects using toString() method
         System.out.println("Triangle 1: " + triangle1.toString());
         System.out.println("Triangle 2: " + triangle2.toString());
 
-        // Randomly pick a number between 1 to 15
+        // random integer selection
         Random rand = new Random();
         int numTriangles = rand.nextInt(15) + 1;
 
-        // Create an array of triangle objects equal to the random number
+        // create array of triangle objects
         Triangle[] triangles = new Triangle[numTriangles];
 
-        // Construct the triangle objects in the array by invoking the overloaded constructor
+        // create triangle objects in the array by invoking the overloaded constructor
         for (int i = 0; i < numTriangles; i++) {
             // Randomly assign values for the data fields in range 10 to 50
             int oppositeSide = rand.nextInt(41) + 10; // range: 10-50
@@ -47,7 +58,7 @@ public class TestTriangle {
         }
     }
 
-    public class Triangle {
+    public static class Triangle {
         private int oppositeSide;
         private int adjacentSide;
         private int hypotenuse;
@@ -94,7 +105,7 @@ public class TestTriangle {
             this.hypotenuse = hypotenuse;
         }
     
-        public int getNumOfTriangles() {
+        public static int getNumOfTriangles() {
             return numOfTriangles;
         }
     
