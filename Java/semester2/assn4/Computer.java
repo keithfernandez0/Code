@@ -1,15 +1,27 @@
-package assn4;
-import java.util.Date;
+package semester2.assn4;
+
+/**************************************************************
+ * Kean University
+ * Spring 2023
+ * Course: CPS*2231 - Computer Programming in Java
+ * Author: Keith Michelangelo Fernandez, CPS*2231
+ * 
+ * Lab Assignment 4
+ * 
+ * Practicing with extended classes and object-oriented
+ * programming in Java.
+ **************************************************************
+ */
 
 public class Computer {
 
     // ============================================
 
     // Data field
-    private String model;
-    private String brandName;
-    private String manufacturingDate;
-    private int coreCount;
+    protected String model;
+    protected String brandName;
+    protected String manufacturingDate;
+    protected int coreCount;
 
     // ============================================
 
@@ -72,7 +84,14 @@ public class Computer {
                "CPU Core Count: " + this.coreCount + "\n";
     }
 
-    public static void main (String[] args) {
+    // ============================================
+
+    public static void main(String[] args) {
+
+        // Defining the new objects
+        Computer a = new Computer("Inspiron 1545", "DELL", "April 1, 2020", 2);
+        Computer b = new Computer("A2338", "MacBook", "March 31, 2020", 4);
+        Computer c = new Computer("Custom PC", "Ryzen", "January 1, 2023", 12);
 
     }
     

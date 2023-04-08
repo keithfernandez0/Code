@@ -1,35 +1,24 @@
-/**************************************************************
- * Kean University
- * Spring 2023
- * Course: CPS*2231 - Computer Programming in Java
- * Author: Keith Michelangelo Fernandez, CPS*2231
- * 
- * HW Assignment 3
- **************************************************************
- */
-
 package semester2;
 import java.util.Random;
 
 public class TestTriangle {
     public static void main(String[] args) {
-        
-        // create new objects
+        // Create two Triangle objects
         Triangle triangle1 = new Triangle();
         Triangle triangle2 = new Triangle(3, 4, 5);
 
-        // print contents of both objects using toString() method
+        // Print the contents of both objects using toString() method
         System.out.println("Triangle 1: " + triangle1.toString());
         System.out.println("Triangle 2: " + triangle2.toString());
 
-        // random integer selection
+        // Randomly pick a number between 1 to 15
         Random rand = new Random();
         int numTriangles = rand.nextInt(15) + 1;
 
-        // create array of triangle objects
+        // Create an array of triangle objects equal to the random number
         Triangle[] triangles = new Triangle[numTriangles];
 
-        // create triangle objects in the array by invoking the overloaded constructor
+        // Construct the triangle objects in the array by invoking the overloaded constructor
         for (int i = 0; i < numTriangles; i++) {
             // Randomly assign values for the data fields in range 10 to 50
             int oppositeSide = rand.nextInt(41) + 10; // range: 10-50
@@ -58,7 +47,7 @@ public class TestTriangle {
         }
     }
 
-    public static class Triangle {
+    public class Triangle {
         private int oppositeSide;
         private int adjacentSide;
         private int hypotenuse;
