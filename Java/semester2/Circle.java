@@ -5,7 +5,7 @@ public class Circle extends GeometricObject {
     private double radius;
 
     public Circle() {
-        super(); // invokes deafault constructor
+        super(); // invokes default constructor
         radius = 1.0;
     }
 
@@ -14,7 +14,7 @@ public class Circle extends GeometricObject {
         this.radius = radius;
     }
     public Circle(double radius, String color, boolean filled) {
-        super(color, filled); // invokes overloaded constuctor
+        super(color, filled); // invokes overloaded constructor
         this.radius = radius;
         this.color = color;
         this.filled = filled;
@@ -50,7 +50,7 @@ public class Circle extends GeometricObject {
 
     @Override
     public String toString() {
-        return "Circle[getRadius()="+getRadius()+", getArea()="+getArea()+", getDiameter()="+
+        return "Circle[getRadius()="+getRadius()+", getArea()="+getArea()+", getDiameter()=";
     }
 
 }
