@@ -1,3 +1,13 @@
+/**************************************************************
+ * Kean University
+ * Spring 2023
+ * Course: CPS*2231 - Computer Programming in Java
+ * Author: Keith Michelangelo Fernandez, CPS*2231
+ * 
+ * HW Assignment 5
+ **************************************************************
+ */
+
 enum Color {
     YELLOW,
     ORANGE,

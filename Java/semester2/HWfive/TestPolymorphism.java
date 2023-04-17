@@ -1,3 +1,13 @@
+/**************************************************************
+ * Kean University
+ * Spring 2023
+ * Course: CPS*2231 - Computer Programming in Java
+ * Author: Keith Michelangelo Fernandez, CPS*2231
+ * 
+ * HW Assignment 5
+ **************************************************************
+ */
+
 public class TestPolymorphism {
 
     public static void main(String[] args) {
@@ -20,7 +30,6 @@ public class TestPolymorphism {
 
         // Begin displaying out class and object attributes
         System.out.println("Total number of fruits: " + Fruit.getNumberOfFruits());
-    
         System.out.println("The actual class of fruit1 is " + fruit1.getClass());
         System.out.println("The actual class of fruit2 is " + fruit2.getClass());
         System.out.println("The actual class of apple1 is " + apple1.getClass());
@@ -37,9 +46,11 @@ public class TestPolymorphism {
     
         // =============================================================
 
-        // Check class for object-grape
+        // Check class for object Grape
         System.out.println("The actual class of grape1 is " + grape1.getClass());
         System.out.println("The actual class of grape2 is " + grape2.getClass());
+
+        // =============================================================
     
         // Check equalities
         if (fruit2.equals(grape2)) {
@@ -47,19 +58,15 @@ public class TestPolymorphism {
         } else {
             System.out.println("fruit2 and grape2 are not equal.");
         }
+
+        // =============================================================
     
-        // Step (k)
-        // No, because the getTexture() method is not defined in the Fruit or any of its superclasses.
-    
-        // Step (l)
-        // Yes, because the getTaste() method is defined in the Grapes class.
-    
+        // Verify subclass and superclass behavior
         apple2 = (Apple) apple2;
-        //System.out.println("Texture of apple2: " + apple2.getTexture()); // Has Fruit+Apple data type, will error on compile time
+        System.out.println("Texture of apple2: " + ((Apple)apple2).getTexture()); 
         grape2 = (Grapes) grape2;
-        //System.out.println("Taste of grape2: " + grape2.getTaste()); // Only has the Fruit data type, will also error when compiled.
-    
-        // No, because the reference type of "fruit2" is Fruit, and Fruit is not a subclass of Apple.
+        System.out.println("Taste of grape2: " + ((Grapes)grape2).getTaste());
+.
         
         // =============================================================
 
@@ -74,7 +81,7 @@ public class TestPolymorphism {
     
     // =============================================================
 
-    // Method to write string readout on console
+    // Method to write string readout on console using toString() method
 
     public static void displayObject(Object obj) {
         if (obj instanceof Fruit) {
