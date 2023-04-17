@@ -16,6 +16,8 @@ public class arrayRand {
         numArray[numArray.length-1] = tmp;
         System.out.println("Temp var: " + tmp);
 
+        input.close();
+
     }
 
         public static void printArray(int[] arr) 
@@ -25,4 +27,5 @@ public class arrayRand {
                 System.out.println(arr[i] + " ");
             }
         }
+
 }

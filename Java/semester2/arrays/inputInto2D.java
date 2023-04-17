@@ -21,6 +21,8 @@ public class inputInto2D {
         System.out.println("\nFinalized matrix:");
         System.out.println(Arrays.deepToString(matrix));
 
+        input.close();
+
     }
     
 }

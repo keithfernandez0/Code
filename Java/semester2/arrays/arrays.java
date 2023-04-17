@@ -22,6 +22,8 @@ public class arrays {
             }
         }
 
+        input.close();
+
     }
     
 }

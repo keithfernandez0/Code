@@ -15,7 +15,7 @@ public class discussionarray {
         n4 = input.nextInt();
         n5 = input.nextInt();
 
-        
+        input.close();
 
     }
     

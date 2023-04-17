@@ -51,6 +51,7 @@ public class homework2 {
             }
             System.out.println();
         }
+        input.close();
     }
 
     // Method to find average of a row

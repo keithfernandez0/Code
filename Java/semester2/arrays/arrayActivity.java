@@ -39,9 +39,8 @@ public class arrayActivity {
             total += num3[i];
         }
         System.out.println("The total is " + total);
-        
 
-
+        input.close();
 
     }
 }

@@ -39,6 +39,8 @@ public class lab {
         int min2 = findMinimum(num1, num2, num3, num4);
         System.out.println("Minimum of first three numbers: " + min1);
         System.out.println("Minimum of all four numbers: " + min2);
+
+        input.close();
     }
 
     public static char findChar(int num) {

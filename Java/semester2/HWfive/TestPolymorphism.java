@@ -66,7 +66,6 @@ public class TestPolymorphism {
         System.out.println("Texture of apple2: " + ((Apple)apple2).getTexture()); 
         grape2 = (Grapes) grape2;
         System.out.println("Taste of grape2: " + ((Grapes)grape2).getTaste());
-.
         
         // =============================================================
 

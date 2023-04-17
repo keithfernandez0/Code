@@ -32,6 +32,8 @@ class BinarySearch {
                         + " until you were correct.");
             break;
             }
-        }     
+        }
+        
+        input.close();
     }
 }
