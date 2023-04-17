@@ -1,5 +1,3 @@
-package semester2;
-
 public class string {
     public static void main(String[] args) {
         String message = "Welcome to Java";

@@ -7,7 +7,6 @@
  * operations in Java.
  */
 
-package semester1;
 import java.util.Scanner;
 import java.lang.Math;
 

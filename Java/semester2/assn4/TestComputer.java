@@ -1,5 +1,3 @@
-package semester2.assn4;
-
 public class TestComputer extends Computer {
     public static void main(String[] args) {
 

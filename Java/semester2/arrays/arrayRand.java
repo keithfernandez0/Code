@@ -1,4 +1,3 @@
-package semester2.arrays;
 import java.util.Scanner;
 
 public class arrayRand {

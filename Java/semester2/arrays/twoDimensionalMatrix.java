@@ -1,5 +1,3 @@
-package semester2.arrays;
-
 public class twoDimensionalMatrix {
     public static void main(String[] args) {
 

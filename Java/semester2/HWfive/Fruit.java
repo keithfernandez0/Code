@@ -1,7 +1,3 @@
-
-
-
-
 enum Color {
     YELLOW,
     ORANGE,

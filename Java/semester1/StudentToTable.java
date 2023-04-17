@@ -1,5 +1,3 @@
-package semester1;
-
 public class StudentToTable {
     public static void main(String[] args) {
 

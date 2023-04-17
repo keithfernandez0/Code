@@ -1,5 +1,3 @@
-
-
 public class Grapes extends Fruit {
 
     // Data fields

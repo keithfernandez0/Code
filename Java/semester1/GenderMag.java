@@ -4,7 +4,6 @@
  *  Dr. Jean Chu
  */
 
-package semester1;
 import java.text.DecimalFormat;
 import java.util.Scanner;
 

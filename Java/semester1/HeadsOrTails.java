@@ -1,4 +1,3 @@
-package semester1;
 import java.lang.Math;
 import java.util.Scanner;
 

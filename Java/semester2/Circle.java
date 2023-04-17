@@ -1,4 +1,3 @@
-package semester2;
 import java.lang.Math;
 
 public class Circle extends GeometricObject {

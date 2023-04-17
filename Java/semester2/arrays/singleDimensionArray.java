@@ -8,7 +8,6 @@
  **************************************************************
  */
 
-package semester2.arrays;
 import java.util.Scanner;
 import java.util.Random;
 import java.util.Arrays;

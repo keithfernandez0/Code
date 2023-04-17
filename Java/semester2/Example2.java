@@ -1,4 +1,3 @@
-package semester2;
 import java.awt.Color;
 
 public class Example2 {

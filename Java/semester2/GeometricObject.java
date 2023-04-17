@@ -1,4 +1,4 @@
-package semester2;
+
 import java.util.*;
 
 public class GeometricObject {

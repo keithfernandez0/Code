@@ -1,5 +1,3 @@
-package semester2.inclass4_13;
-
 public class Contractor extends Employee {
 
     public static void main(String[] args) {

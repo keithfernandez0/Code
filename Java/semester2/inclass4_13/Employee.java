@@ -1,5 +1,3 @@
-package semester2.inclass4_13;
-
 public class Employee {
 
     // Data fields

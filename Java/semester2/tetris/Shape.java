@@ -1,5 +1,3 @@
-package semester2.tetris;
-
 import java.util.Random;
 
 // https://github.com/janbodnar/Java-Tetris-Game/blob/master/com/zetcode/Shape.java

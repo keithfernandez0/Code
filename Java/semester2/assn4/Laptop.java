@@ -1,5 +1,3 @@
-package semester2.assn4;
-
 public class Laptop extends Computer {
 
     private double weight;

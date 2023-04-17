@@ -1,5 +1,3 @@
-package semester2;
-
 public class Rectangle extends GeometricObject {
 
     private double width;

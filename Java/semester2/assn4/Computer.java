@@ -1,5 +1,3 @@
-package semester2.assn4;
-
 /**************************************************************
  * Kean University
  * Spring 2023

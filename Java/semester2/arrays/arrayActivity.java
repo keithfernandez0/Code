@@ -1,6 +1,7 @@
-package semester2.arrays;
 import java.util.Scanner;
 import java.lang.Math;
+
+
 public class arrayActivity {
     public static void main(String[] args) {
         

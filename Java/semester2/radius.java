@@ -1,5 +1,3 @@
-package semester2;
-
 public class radius {
     public static void main(String[] args) {
 

@@ -1,4 +1,3 @@
-package semester2;
 public class whileloop {
     public static void main(String[] args) {
 
