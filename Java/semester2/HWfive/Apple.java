@@ -1,5 +1,3 @@
-package semester2.HWfive;
-
 public class Apple extends Fruit {
 
     // Data fields
