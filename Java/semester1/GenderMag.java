@@ -25,7 +25,7 @@ public class GenderMag {
             System.exit(1);
         }
 
-        System.out.println("Your yearly income is " + df.format(income) + " USD.\n");
+        System.out.println("Your yearly income is $" + df.format(income) + " USD.\n");
 
         System.out.println("Please select your filing status (1 - 2).");
         System.out.println("[1] - Single Filer");
@@ -39,7 +39,7 @@ public class GenderMag {
                 netIncome = income - taxedAmount;
                 System.out.println("\nMarital status: Single Filer");
                 System.out.println("Your total taxed amount from your income is $" + df.format(taxedAmount));
-                System.out.println("Your tax rate is " + df.format(taxRate) + " and your net income is $" + df.format(netIncome));
+                System.out.println("Your tax rate is " + (taxRate*100) + "% and your net income is $" + df.format(netIncome));
                 break;
 
             case 2:
@@ -48,7 +48,7 @@ public class GenderMag {
                 netIncome = income - taxedAmount;
                 System.out.println("\nMarital status: Married Filer");
                 System.out.println("Your total taxed amount from your income is $" + df.format(taxedAmount));
-                System.out.println("Your tax rate is " + df.format(taxRate) + " and your net income is $" + df.format(netIncome));
+                System.out.println("Your tax rate is " + (taxRate*100) + "% and your net income is $" + df.format(netIncome));
                 break;
             
             default:
