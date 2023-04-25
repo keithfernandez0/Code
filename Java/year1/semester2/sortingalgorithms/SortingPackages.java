@@ -14,15 +14,15 @@ public class SortingPackages {
         System.out.println("\nEnter the length of your integer array: ");
         int upperLimit = input.nextInt();
 
-        System.out.println("\nRunning arrayMaker()...");
+        System.out.println("\n[Running arrayMaker()...]");
 
         int[] arr = new int[upperLimit];
 
         for (int i = 0; i < arr.length; i++) {
             arr[i] = seed.nextInt(); // store integers
         }
-        System.out.println("Storing elements...");
-        System.out.println("arrayMaker() execution successful.\n");
+        System.out.println("[Storing elements...]");
+        System.out.println("[arrayMaker() execution successful.]\n");
         return arr;
     }
 
@@ -129,7 +129,7 @@ public class SortingPackages {
                 }
                 break;
             default:
-                System.out.println("Invalid sorting algorithm.");
+                System.out.println("[Invalid sorting algorithm.]");
                 return -1;
         }
         long endTime = System.nanoTime();
@@ -143,14 +143,15 @@ public class SortingPackages {
 
         arr = arrayMaker();
 
-        System.out.println("Choose a sorting algorithm (Bubble/Quick/Merge/Bogo): ");
+        System.out.println("Choose a sorting algorithm (Bubble/Quick/Merge/Bogo): \n");
         String algorithm = input.nextLine();
+        System.out.println();
 
         long elapsedTime = timeSort(arr, algorithm);
 
         if (isSorted(arr)) {
-            System.out.println("Sorting successful.");
-            System.out.println("Elapsed time: " + elapsedTime + " ns.");
+            System.out.println("[Sorting successful.]");
+            System.out.println("[Elapsed time: " + elapsedTime + " ns.]\n");
         } else {
             System.out.println("Sorting failed.");
         }
