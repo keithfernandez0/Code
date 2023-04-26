@@ -1,3 +1,4 @@
+package HW5;
 /**************************************************************
  * Kean University
  * Spring 2023
@@ -8,46 +9,46 @@
  **************************************************************
  */
 
-public class Apple extends Fruit {
+public class Grapes extends Fruit {
 
     // Data fields
-    private String variety;
-    private String texture;
+    private String taste;
+    private boolean hasSeed;
 
     // =============================================================
 
     // Constructors
 
     // No-arg constructor
-    public Apple() {} 
+    public Grapes() {}
 
     // Complete constructor
-    public Apple(String variety, String texture, Color color, int calories, double pricerPerPound) {
+    public Grapes(String taste, boolean hasSeed, Color color, int calories, double pricerPerPound) {
         super(color, calories, pricerPerPound);
-        this.variety = variety;
-        this.texture = texture;
+        this.taste = taste;
+        this.hasSeed = hasSeed;
     }
 
     // =============================================================
 
     // Getter methods
-    public String getVariety() {
-        return variety;
+    public String getTaste() {
+        return taste;
     }
 
-    public String getTexture() {
-        return texture;
+    public boolean getHasSeed() {
+        return hasSeed;
     }
 
     // =============================================================
 
     // Setter methods
-    public void setVariety(String variety) {
-        this.variety = variety;
+    public void setTaste(String taste) {
+        this.taste = taste;
     }
 
-    public void setTexture(String texture) {
-        this.texture = texture;
+    public void setHasSeed(boolean hasSeed) {
+        this.hasSeed = hasSeed;
     }
 
     // =============================================================
@@ -55,11 +56,12 @@ public class Apple extends Fruit {
     // Prints overridden method string readout of class attributes
     @Override
     public String toString() {
-        return "Variety: " + variety + '\n' +
-               "Texture: " + texture + '\n' +
+        return "Taste: " + taste + '\n' +
+               "Contains seeds: " + hasSeed + '\n' +
                "Color: " + getColor() + '\n' +
                "Calories: " + getCalories() + '\n' +
                "Price per pound: " + getPricePerPound() + '\n' +
                "Number of fruits: " + getNumberOfFruits(); 
     } 
+    
 }
