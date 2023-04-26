@@ -153,7 +153,7 @@ public class SortingPackages {
             System.out.println("[Sorting successful.]");
             System.out.println("[Elapsed time: " + elapsedTime + " ns.]\n");
         } else {
-            System.out.println("Sorting failed.");
+            System.out.println("[Sorting failed.]\n");
         }
     }
 }
