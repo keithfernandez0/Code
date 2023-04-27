@@ -1,6 +1,6 @@
 package HW6;
 
-public class AnalogWatch  extends Watch {
+public class AnalogWatch extends Watch {
 
     // Data fields
     private int numOfHands;
@@ -30,6 +30,18 @@ public class AnalogWatch  extends Watch {
     public void setNumOfHands(int numOfHands) {
         this.numOfHands = numOfHands;
     }
+
+    // ================================================================
+
+    @Override
+    public String toString() {
+        return "Brand: " + getBrand() + "\n" +
+               "Material: " + getMaterial() + "\n" +
+               "Price: " + getPrice() + "\n" +
+               "Number of hands: " + numOfHands + "\n";
+    }
+
+    // ================================================================
 
     // ================================================================
 

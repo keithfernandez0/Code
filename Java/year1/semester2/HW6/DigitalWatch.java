@@ -35,9 +35,10 @@ public class DigitalWatch extends Watch {
 
     @Override
     public String toString() {
-        return "Brand: " + brand + "\n" +
-               "Material: " + material + "\n" +
-               "Price: " + price + "\n";
+        return "Brand: " + getBrand() + "\n" +
+               "Material: " + getMaterial() + "\n" +
+               "Price: " + getPrice() + "\n" +
+               "Hour Format: " + hourFormat + "\n";
     }
 
     // ================================================================
