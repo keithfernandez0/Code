@@ -11,7 +11,7 @@ public class SortingPackages {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.println("\nEnter the length of your integer array: ");
+        System.out.println("\n<< Enter the length of your integer array: >>");
         int upperLimit = input.nextInt();
 
         System.out.println("\n[Running arrayMaker()...]");
@@ -48,6 +48,7 @@ public class SortingPackages {
     }
 
     private static void mergeSort(int[] arr, int left, int right) {
+        
         if (left < right) {
             int mid = (left + right) / 2;
             mergeSort(arr, left, mid);
@@ -57,28 +58,36 @@ public class SortingPackages {
     }
     
     private static void merge(int[] arr, int left, int mid, int right) {
+
         int[] temp = new int[right - left + 1];
         int i = left, j = mid + 1, k = 0;
+
         while (i <= mid && j <= right) {
             if (arr[i] <= arr[j]) {
                 temp[k] = arr[i];
                 i++;
-            } else {
+            } 
+            
+            else {
                 temp[k] = arr[j];
                 j++;
             }
+
             k++;
         }
+
         while (i <= mid) {
             temp[k] = arr[i];
             i++;
             k++;
         }
+
         while (j <= right) {
             temp[k] = arr[j];
             j++;
             k++;
         }
+
         for (k = 0; k < temp.length; k++) {
             arr[left + k] = temp[k];
         }
@@ -103,27 +112,33 @@ public class SortingPackages {
     }
 
     private static boolean isSorted(int[] arr) {
+
         for (int i = 0; i < arr.length - 1; i++) {
+
             if (arr[i] > arr[i + 1]) {
                 return false;
             }
         }
+
         return true;
     }
 
-    private static long timeSort(int[] arr, String algorithm) {
+    private static long timeSort(int[] arr, int algorithm) {
+
         long startTime = System.nanoTime();
+
         switch (algorithm) {
-            case "Bubble":
+
+            case 1:
                 Arrays.sort(arr);
                 break;
-            case "Quick":
+            case 2:
                 quickSort(arr, 0, arr.length - 1);
                 break;
-            case "Merge":
+            case 3:
                 mergeSort(arr, 0, arr.length - 1);
                 break;
-            case "Bogo":
+            case 4:
                 while (!isSorted(arr)) {
                     shuffle(arr);
                 }
@@ -132,6 +147,7 @@ public class SortingPackages {
                 System.out.println("[Invalid sorting algorithm.]");
                 return -1;
         }
+
         long endTime = System.nanoTime();
         return endTime - startTime;
     }
@@ -143,8 +159,13 @@ public class SortingPackages {
 
         arr = arrayMaker();
 
-        System.out.println("Choose a sorting algorithm (Bubble/Quick/Merge/Bogo): \n");
-        String algorithm = input.nextLine();
+        System.out.println("[You may enter a number choice from 1-4.]");
+        System.out.println("<< Choose a sorting algorithm: >>\n");
+        System.out.println("1.) Bubble");
+        System.out.println("2.) Quick");
+        System.out.println("3.) Merge");
+        System.out.println("4.) Bogo (very slow!)");
+        int algorithm = input.nextInt();
         System.out.println();
 
         long elapsedTime = timeSort(arr, algorithm);
