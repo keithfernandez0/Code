@@ -1,122 +1,141 @@
 {
-    "version": "0.2.0",
-    "configurations": [
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "twoDimensionalMatrix",
+      "request": "launch",
+      "mainClass": "semester2.arrays.twoDimensionalMatrix",
+      "projectName": "Code_918d8862"
+    },
+    {
+      "type": "java",
+      "name": "Launch StudentInformation",
+      "request": "launch",
+      "mainClass": "semester2.StudentInformation",
+      "projectName": "Code_918d8862"
+    },
+    {
+      "type": "java",
+      "name": "Launch singleDimensionArray",
+      "request": "launch",
+      "mainClass": "semester2.arrays.singleDimensionArray",
+      "projectName": "Code_918d8862"
+    },
+    {
+      "type": "java",
+      "name": "Launch RadiationCalculator",
+      "request": "launch",
+      "mainClass": "Java.RadiationCalculator",
+      "projectName": "Code_1ff7ded2"
+    },
+    {
+      "type": "java",
+      "name": "Launch RadiationCalculator",
+      "request": "launch",
+      "mainClass": "Java.RadiationCalculator",
+      "projectName": "Code_2257536c"
+    },
+    {
+      "type": "java",
+      "name": "Launch HeadsOrTails",
+      "request": "launch",
+      "mainClass": "Java.HeadsOrTails",
+      "projectName": "Code_2257536c"
+    },
+    {
+      "type": "java",
+      "name": "Launch StudentToTable",
+      "request": "launch",
+      "mainClass": "Java.StudentToTable",
+      "projectName": "Code_2257536c"
+    },
+    {
+      "type": "java",
+      "name": "Launch Stringer",
+      "request": "launch",
+      "mainClass": "Java.Stringer",
+      "projectName": "Code_2257536c"
+    },
+    {
+      "type": "java",
+      "name": "Launch Convert",
+      "request": "launch",
+      "mainClass": "Java.Convert",
+      "projectName": "Code_2257536c"
+    },
+    {
+      "type": "java",
+      "name": "Launch MinOrMax",
+      "request": "launch",
+      "mainClass": "Java.MinOrMax",
+      "projectName": "Code_2257536c"
+    },
+    {
+      "type": "java",
+      "name": "Launch Lab4n1",
+      "request": "launch",
+      "mainClass": "Java.Lab4n1",
+      "projectName": "Code_2257536c"
+    },
+    {
+      "type": "java",
+      "name": "Launch fernkayl_Prog2",
+      "request": "launch",
+      "mainClass": "Java.fernkayl_Prog2",
+      "projectName": "Code_2257536c"
+    },
+    {
+      "type": "java",
+      "name": "Launch CommissionRate",
+      "request": "launch",
+      "mainClass": "Java.CommissionRate",
+      "projectName": "Code_2257536c"
+    },
+    {
+      "name": "C/C++: gcc build and debug active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "setupCommands": [
         {
-            "type": "java",
-            "name": "twoDimensionalMatrix",
-            "request": "launch",
-            "mainClass": "semester2.arrays.twoDimensionalMatrix",
-            "projectName": "Code_918d8862"
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
         },
         {
-            "type": "java",
-            "name": "Launch StudentInformation",
-            "request": "launch",
-            "mainClass": "semester2.StudentInformation",
-            "projectName": "Code_918d8862"
-        },
-        {
-            "type": "java",
-            "name": "Launch singleDimensionArray",
-            "request": "launch",
-            "mainClass": "semester2.arrays.singleDimensionArray",
-            "projectName": "Code_918d8862"
-        },
-        {
-            "type": "java",
-            "name": "Launch RadiationCalculator",
-            "request": "launch",
-            "mainClass": "Java.RadiationCalculator",
-            "projectName": "Code_1ff7ded2"
-        },
-        {
-            "type": "java",
-            "name": "Launch RadiationCalculator",
-            "request": "launch",
-            "mainClass": "Java.RadiationCalculator",
-            "projectName": "Code_2257536c"
-        },
-        {
-            "type": "java",
-            "name": "Launch HeadsOrTails",
-            "request": "launch",
-            "mainClass": "Java.HeadsOrTails",
-            "projectName": "Code_2257536c"
-        },
-        {
-            "type": "java",
-            "name": "Launch StudentToTable",
-            "request": "launch",
-            "mainClass": "Java.StudentToTable",
-            "projectName": "Code_2257536c"
-        },
-        {
-            "type": "java",
-            "name": "Launch Stringer",
-            "request": "launch",
-            "mainClass": "Java.Stringer",
-            "projectName": "Code_2257536c"
-        },
-        {
-            "type": "java",
-            "name": "Launch Convert",
-            "request": "launch",
-            "mainClass": "Java.Convert",
-            "projectName": "Code_2257536c"
-        },
-        {
-            "type": "java",
-            "name": "Launch MinOrMax",
-            "request": "launch",
-            "mainClass": "Java.MinOrMax",
-            "projectName": "Code_2257536c"
-        },
-        {
-            "type": "java",
-            "name": "Launch Lab4n1",
-            "request": "launch",
-            "mainClass": "Java.Lab4n1",
-            "projectName": "Code_2257536c"
-        },
-        {
-            "type": "java",
-            "name": "Launch fernkayl_Prog2",
-            "request": "launch",
-            "mainClass": "Java.fernkayl_Prog2",
-            "projectName": "Code_2257536c"
-        },
-        {
-            "type": "java",
-            "name": "Launch CommissionRate",
-            "request": "launch",
-            "mainClass": "Java.CommissionRate",
-            "projectName": "Code_2257536c"
-        },
-        {
-            "name": "C/C++: gcc build and debug active file",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Enable pretty-printing for gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                },
-                {
-                    "description": "Set Disassembly Flavor to Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
-                }
-            ],
-            "preLaunchTask": "C/C++: gcc build active file",
-            "miDebuggerPath": "/usr/bin/gdb"
+          "description": "Set Disassembly Flavor to Intel",
+          "text": "-gdb-set disassembly-flavor intel",
+          "ignoreFailures": true
         }
-    ]
+      ],
+      "preLaunchTask": "C/C++: gcc build active file",
+      "miDebuggerPath": "/usr/bin/gdb"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": false,
+      "cwd": "/home/lain/GitHub/Code/CPP",
+      "program": "/home/lain/GitHub/Code/CPP/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
 }
