@@ -9,17 +9,19 @@
  */
 
 package HW7;
+import java.time.LocalDate;
 
 
 public class Pet 
-
 {
     // ================================================================
 
     // Data fields
     private String name;
-    private int age;
-    private String breed;
+    private LocalDate birthDate;
+    private double price;
+    private String speciesType;
+    private String specialFeature;
 
     // ================================================================
 
@@ -27,11 +29,13 @@ public class Pet
     public Pet() {}
 
     // Complete constructor
-    public Pet(String name, int age, String breed) 
+    public Pet(String name, LocalDate birthDate, double price, String speciesType, String specialFeature) 
     {
       this.name = name;
-      this.age = age;
-      this.breed = breed;
+      this.birthDate = birthDate;
+      this.price = price;
+      this.speciesType = speciesType;
+      this.specialFeature = specialFeature;
     }
   
     // ================================================================
@@ -42,14 +46,24 @@ public class Pet
         return name;
     }
 
-    public int getAge() 
+    public LocalDate getBirthDate() 
     {
-        return age;
+        return birthDate;
     }
 
-    public String getBreed() 
+    public double getPrice() 
     {
-        return breed;
+        return price;
+    }
+
+    public String getSpeciesType() 
+    {
+        return speciesType;
+    }
+
+    public String getSpecialFeature() 
+    {
+        return specialFeature;
     }
 
     // ================================================================
@@ -60,17 +74,37 @@ public class Pet
         this.name = name;
     }
 
-    public void setAge(int age)
+    public void setBirthDate(LocalDate birthDate) 
     {
-        this.age = age;
+        this.birthDate = birthDate;
     }
 
-    public void setBreed(String breed) 
+    public void setPrice(double price)
     {
-        this.breed = breed;
+        this.price = price;
     }
 
+    public void setSpeciesType(String speciesType) 
+    {
+        this.speciesType = speciesType;
+    }
 
+    public void setSpecialFeature(String specialFeature) 
+    {
+        this.specialFeature = specialFeature;
+    }
+
+    // ================================================================
+
+    // toString method
+    public String toString() 
+    {
+        return "Name: " + name + "\n" +
+               "Birth Date: " + birthDate + "\n" +
+               "Price: " + price + "\n" +
+               "Species Type: " + speciesType + "\n" +
+               "Special Feature: " + specialFeature;
+    }
 
   }
 
