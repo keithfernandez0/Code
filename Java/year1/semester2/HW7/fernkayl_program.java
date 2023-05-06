@@ -1,3 +1,4 @@
+
 /**************************************************************
  * Kean University
  * Spring 2023
@@ -11,7 +12,9 @@
 import java.io.*;
 import java.util.*;
 
-public class fernkayl_program {
+public class fernkayl_program 
+
+{
 
     public static void main(String[] args) throws Exception
     {

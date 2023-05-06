@@ -1,8 +1,16 @@
-package HW7;
+/**************************************************************
+ * Kean University
+ * Spring 2023
+ * Course: CPS*2231 - Computer Programming in Java
+ * Author: Keith Michelangelo Fernandez
+ * 
+ * HW Assignment 7
+ **************************************************************
+ */
 
 import java.time.LocalDate;
 
-public class Dog extends Pet 
+public class Dog extends MyPetStore 
 
 {
     // ================================================================
@@ -15,7 +23,7 @@ public class Dog extends Pet
     // Constructors
     public Dog() {}
 
-    public Dog(String name, LocalDate birthDate, double price, String speciesType, String specialFeature)
+    public Dog(String name, LocalDate birthDate, double price, String speciesType, String specialFeature, String breed)
     {
         super(name, birthDate, price, speciesType, specialFeature);
         this.breed = breed;

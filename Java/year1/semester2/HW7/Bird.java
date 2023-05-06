@@ -10,43 +10,45 @@
 
 import java.time.LocalDate;
 
-public class Cat extends MyPetStore 
+public class Bird extends MyPetStore 
 
 {
+    // ================================================================
+
     // Data fields
-    private String breed;
+    private String movementType; 
 
     // ================================================================
 
-    // Constructors
-    public Cat() {}
+    // Constructors 
 
-    public Cat(String name, LocalDate birthDate, double price, String speciesType, String specialFeature, String breed)
+    public Bird() {}
+
+    public Bird(String name, LocalDate birthDate, double price, String speciesType, String specialFeature, String movementType) 
     {
         super(name, birthDate, price, speciesType, specialFeature);
-        this.breed = breed;
+        this.movementType = movementType;
     }
 
     // ================================================================
 
-    // Getter method
-    public String getBreed() 
+    // Getter methods
+    public String getMovementType() 
     {
-        return breed;
+        return movementType;
     }
 
     // ================================================================
 
     // Setter method
-    public void setBreed(String breed) 
+    public void setMovementType(String movementType) 
     {
-        this.breed = breed;
+        this.movementType = movementType;
     }
 
     // ================================================================
 
-    // toString method
-
+    // toString() method (overridden)
     @Override
     public String toString() 
     {
@@ -55,8 +57,7 @@ public class Cat extends MyPetStore
                "Price: " + getPrice() + "\n" +
                "Species Type: " + getSpeciesType() + "\n" +
                "Special Feature: " + getSpecialFeature() + "\n" +
-               "Breed: " + breed;
+               "Can fly: " + movementType;
     }
 
-    
 }

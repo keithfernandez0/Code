@@ -8,11 +8,9 @@
  **************************************************************
  */
 
-package HW7;
 import java.time.LocalDate;
 
-
-public class Pet 
+public class MyPetStore 
 {
     // ================================================================
 
@@ -26,10 +24,10 @@ public class Pet
     // ================================================================
 
     // no-arg constructor
-    public Pet() {}
+    public MyPetStore() {}
 
     // Complete constructor
-    public Pet(String name, LocalDate birthDate, double price, String speciesType, String specialFeature) 
+    public MyPetStore(String name, LocalDate birthDate, double price, String speciesType, String specialFeature) 
     {
       this.name = name;
       this.birthDate = birthDate;
