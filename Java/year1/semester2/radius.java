@@ -6,7 +6,6 @@ public class radius {
 
         perimeter = 2 * 3.14159 * radius;
         System.out.println(perimeter);
-
         
     }
 }
