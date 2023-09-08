@@ -3,9 +3,60 @@
 // ID: 1209266
 // Email: fernkayl@kean.edu
 // FA23 CPS 2232-02
+// 9/8/2023
 // ====================================================================================
 
-package Java.year2.chapter1.edible;
+package Java.year2.chapter1.edible; // MISCELLANEOUS FILESTRUCTURE STUFF
+
+// ====================================================================================
+
+public class Food 
+{
+    public static void main(String[] args) 
+    {
+        // CREATE NEW INSTANCES
+        Steak steak1 = new Steak("Filet Mignon", 28.99);
+        Steak steak2 = new Steak("Flank Cut", 12.99);
+
+        Stew stew1 = new Stew("Oxtail", 300);
+        Stew stew2 = new Stew("Beef Chuck", 275);
+
+        // STD OUT
+        System.out.println(steak1.howToEat());
+        System.out.println(steak1.howToCook());
+        System.out.println(steak1);
+
+        System.out.println(steak2.howToEat());
+        System.out.println(steak2.howToCook());
+        System.out.println(steak2);
+
+        System.out.println(stew1.howToEat());
+        System.out.println(stew1.howToCook());
+        System.out.println(stew1);
+
+        System.out.println(stew2.howToEat());
+        System.out.println(stew2.howToCook());
+        System.out.println(stew2);
+
+        // CREATE ARRAY
+        Edible[] edibles = new Edible[4];
+        edibles[0] = steak1;
+        edibles[1] = stew2;
+        edibles[2] = steak2;
+        edibles[3] = stew2;
+
+        // PRINT STD-OUT OF METHODS
+        for (int i = 0; i < edibles.length; i++) 
+        {
+            Edible edible = edibles[i];
+            if (edible != null) {
+                System.out.println(edible.howToEat());
+                System.out.println(edible.howToCook());
+            }
+        }
+    }
+
+}
 
 // ====================================================================================
 
@@ -16,7 +67,7 @@ interface Edible
 
     default String howToCook() 
     {
-        return "Cook as described on package.";
+        return "Cook as described on the package.";
     }
 }
 
@@ -33,6 +84,7 @@ class Steak implements Edible
         this.price = price;
     }
 
+    // GETTER AND SETTER CONSTRUCTORS
     public String getType() 
     {
         return type;
@@ -53,6 +105,7 @@ class Steak implements Edible
         this.price = price;
     }
 
+    // STD OUT
     @Override
     public String toString() 
     {
@@ -79,6 +132,7 @@ class Stew implements Edible
         this.calories = calories;
     }
 
+    // GETTER AND SETTER CONSTRUCTORS
     public String getBrothBase() 
     {
         return brothBase;
@@ -99,10 +153,11 @@ class Stew implements Edible
         this.calories = calories;
     }
 
+    // STD OUT
     @Override
     public String toString() 
     {
-        return "Stew [Broth Base = " + brothBase + ", calories = " + calories + "kcals]";
+        return "[Stew Class] [Broth Base = " + brothBase + ", calories = " + calories + "kcals]";
     }
 
     @Override
@@ -113,34 +168,3 @@ class Stew implements Edible
 }
 
 // ====================================================================================
-
-public static void main(String[] args) 
-    {
-        // Step 6: Create instances of Steak and Stew
-        Steak steak = new Steak("Filet Mignon", 28.99);      
-
-
-        // Test methods and print information
-        System.out.println(steak.howToEat());
-        System.out.println(steak.howToCook());
-        System.out.println(steak);
-
-        System.out.println(stew.howToEat());
-        //System.out.println(stew.howToCook());
-        //System.out.println(stew);
-
-        // Create an array of type Edible and add instances
-        Edible[] edibles = new Edible[4];
-        edibles[0] = steak;
-        edibles[1] = steak;
-        //edibles[2] = stew;
-        //edibles[3] = stew;
-
-        // Iterate through the array and call howToEat() for each element
-        for (Edible edible : edibles) 
-        {
-            System.out.println(edible.howToEat());
-        }
-    }
-
-
