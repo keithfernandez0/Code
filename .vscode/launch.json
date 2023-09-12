@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "test",
+      "request": "launch",
+      "mainClass": "Java.year2.chapter1.test",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
       "name": "Food",
       "request": "launch",
       "mainClass": "Java.year2.chapter1.edible.Food",

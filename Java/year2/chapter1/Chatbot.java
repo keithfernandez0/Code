@@ -1,14 +1,27 @@
 package Java.year2.chapter1;
 import java.time.LocalDate;
 
-// Enum to represent the bot's mood
+
+// ====================================================================================
 
 public class Chatbot 
 {
+    private String name;
+    private double version;
+    private LocalDate lastUpdate;
+    String[] supportedLanguages;
+    private String author;
+    private Mood mood;
+    public static int numOfBotsCreated;
+
     enum Mood 
     {
         HAPPY, ANGRY, SAD, NEUTRAL;
     }
+
+    // ====================================================================================
+
+    // GETTER AND SETTER CONSTRUCTORS
 
     public String getName() 
     {
@@ -45,7 +58,8 @@ public class Chatbot
         return author;
     }
 
-    public void setAuthor(String author) {
+    public void setAuthor(String author) 
+    {
         this.author = author;
     }
     public Mood getMood() 
@@ -68,13 +82,7 @@ public class Chatbot
         Chatbot.numOfBotsCreated = numOfBotsCreated;
     }
 
-    private String name;
-    private double version;
-    private LocalDate lastUpdate;
-    String[] supportedLanguages; //change to default??
-    private String author;
-    private Mood mood;
-    public static int numOfBotsCreated;
+    // ====================================================================================
 
     public Chatbot() 
     {
@@ -85,7 +93,9 @@ public class Chatbot
     {
         return supportedLanguages;
     }
-    public void setSupportedLanguages(String[] supportedLanguages) {
+
+    public void setSupportedLanguages(String[] supportedLanguages) 
+    {
         this.supportedLanguages = supportedLanguages;
     }
 
@@ -101,9 +111,7 @@ public class Chatbot
         this.version = version;
     }
 
-    public Chatbot(String name, double version, LocalDate lastUpdate,
-        String[] supportedLanguages, String author,
-        Mood mood) 
+    public Chatbot(String name, double version, LocalDate lastUpdate, String[] supportedLanguages, String author, Mood mood) 
         {
         super();
         this.name = name;
@@ -113,10 +121,13 @@ public class Chatbot
         this.author = author;
         this.mood = mood;
         }
+
     public static int getGetNumOfBotsCreated() 
     {
         return numOfBotsCreated;
     }
+
+    // ====================================================================================
 
     /**
      * @param name
@@ -126,6 +137,8 @@ public class Chatbot
      * @param author
      * @param mood
      */
+
+     // ====================================================================================
 
     String greet() 
     {
@@ -138,7 +151,7 @@ public class Chatbot
 
         case SAD ->
         "Hello. I'm " + name + " version " + version +
-        ", developed by " + author + ". How can I help you today ? ";
+        ", developed by " + author + ". How can I help you today? ";
 
         case ANGRY ->
         "What do you want? I'm " + name + " version " +
@@ -146,7 +159,7 @@ public class Chatbot
 
         default -> // NEUTRAL
         "Hello! I'm " + name + " version " + version +
-        ", developed by " + author + ". How can I assist you today ? ";
+        ", developed by " + author + ". How can I assist you today? ";
         };
     }
 
@@ -155,7 +168,7 @@ public class Chatbot
         return userMessage.contains("hello") ? "Hello there!" :
             userMessage.contains("how are you") ?
             respond() :
-            "I'm sorry, I don't understand that. Can you rephrase ? ";
+            "I'm sorry, I don't understand that. Can you rephrase? ";
     }
 
     private String respond() 
@@ -163,11 +176,13 @@ public class Chatbot
         return switch (mood) {
         case HAPPY -> "I'm feeling great! How can I help you?";
         case SAD -> "I'm a bit down. What can I assist with?";
-        case ANGRY -> "What now?";
+        case ANGRY -> "What now!?";
         default -> "I'm just a program, so I don't have feelings, " +
-        "but I'm functioning properly. What can I do for you ? ";
+        "but I'm functioning properly. What can I do for you? ";
         };
     }
+
+    // ====================================================================================
 
     public class TestBot 
     {
@@ -180,8 +195,10 @@ public class Chatbot
             Chatbot bot1 = new Chatbot("ChatGPT Turbo", 2.0, today, languages1, "OpenAI", Mood.HAPPY);
             Chatbot bot2 = new Chatbot("Bard", 1.6, today, languages2, "Google", Mood.SAD);
 
+            System.out.println("\n");
             System.out.println(bot1.greet() + "\n");
             System.out.println(bot2.greet());
+            System.out.println("\n");
 
         }
     }
