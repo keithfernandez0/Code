@@ -13,25 +13,24 @@ package Java.year2.chapter1;
 
 public class RecursiveLinearSearch 
 {
-    public static int recursiveLinearSearch(int[] list, int key, int i) 
+    public static int RecursiveLinearSearch(int[] list, int key, int index) 
     {
-        if (i >= list.length) 
+        if (index >= list.length) 
         {
-            return -1; 
+            return -1; // IF KEY IS NOT FOUND
         }
 
-        if (list[i] == key) 
+        if (list[index] == key) 
         {
-            return i;
+            return index; 
         }
 
-        // FUNCTION WILL CALL BACK ONTO ITSELF
-        return recursiveLinearSearch(list, key, i + 1);
+        return RecursiveLinearSearch(list, key, index + 1);
     }
 
     public static void main(String[] args) 
     {
-        final int N = 10000000;
+        final int N = 1000;
         final int KEY = 150;
         int[] list = new int[N];
 
@@ -49,7 +48,7 @@ public class RecursiveLinearSearch
         // START STOPWATCH
         begin = System.nanoTime();
         System.out.println("\n>> [Starting nanoTime() timer...]");
-        System.out.println(">> [Program return status on RecursiveLinearSearch(): " + recursiveLinearSearch(list, KEY, 0) + "]");
+        System.out.println(">> [Program return status on RecursiveLinearSearch(): " + RecursiveLinearSearch(list, KEY, 0) + "]");
         end = System.nanoTime();
         System.out.println(">> [Ended nanoTime() timer.]");
         System.out.println(">> [Calculating time in nanoseconds...]\n");
@@ -57,4 +56,3 @@ public class RecursiveLinearSearch
         System.out.println("It took " + time + " nanoseconds to run RecursiveLinearSearch() with the key " + KEY + " on the array of " + N + " elements.");
     }
 }
-
