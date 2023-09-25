@@ -25,7 +25,7 @@ public class LinearSearch
   
     public static void main(String[] args) 
     {
-        final int N = 100000;
+        final int N = 1000;
         final int KEY = 150;
         int[] list = new int[N];
 
