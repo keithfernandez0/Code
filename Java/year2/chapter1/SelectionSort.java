@@ -11,48 +11,54 @@
 
 package Java.year2.chapter1;
 
-public class RecursiveLinearSearch 
+public class SelectionSort 
 {
-    public static int RecursiveLinearSearch(int[] list, int key, int index) 
+    public static void SelectionSort(double[] list) 
     {
-        if (index >= list.length) 
+        for (int i = 0; i < list.length - 1; i++) 
         {
-            return -1; // IF KEY IS NOT FOUND
-        }
-
-        if (list[index] == key) 
+            double currentMin = list[i];
+            int currentMinIndex = i;
+  
+            for (int j = i + 1; j < list.length; j++) 
+            {
+                if (currentMin > list[j]) 
+                {
+                    currentMin = list[j];
+                    currentMinIndex = j;
+                }
+            }
+  
+        if (currentMinIndex != i) 
         {
-            return index; 
+          list[currentMinIndex] = list[i];
+          list[i] = currentMin;
         }
-
-        return RecursiveLinearSearch(list, key, index + 1);
+      }
     }
 
     public static void main(String[] args) 
     {
         final int N = 100000;
-        final int KEY = 150;
-        int[] list = new int[N];
+        double[] list = new double[N];
 
-        for (int i = 0; i < N; i++)
+        for (int i = 0; i < N; i++) 
         {
-            // GENERATOR FOR POSITIVE + NEGATIVE INTEGERS FROM -100 TO +100
             list[i] = (int)(Math.random() * 100 * (Math.random() > 0.5 ? 1 : -1));
-            // STD OUT: PRINT THE NUMBERS
             System.out.println(list[i] + ",");
         }
 
-        // STOPWATCH CODE
         long begin, end, time;
 
-        // START STOPWATCH
         begin = System.nanoTime();
         System.out.println("\n>> [Starting nanoTime() timer...]");
-        System.out.println(">> [Program return status on RecursiveLinearSearch(): " + RecursiveLinearSearch(list, KEY, 0) + "]");
+        SelectionSort(list);
         end = System.nanoTime();
         System.out.println(">> [Ended nanoTime() timer.]");
         System.out.println(">> [Calculating time in nanoseconds...]\n");
         time = end - begin;
-        System.out.println("It took " + time + " nanoseconds to run RecursiveLinearSearch() with the key " + KEY + " on the array of " + N + " elements.");
+        System.out.println("It took " + time + " nanoseconds to run SelectionSort() on the array of " + N + " elements.");
     }
+
 }
+  

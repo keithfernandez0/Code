@@ -11,48 +11,51 @@
 
 package Java.year2.chapter1;
 
-public class RecursiveLinearSearch 
+public class RecursiveBinarySearch 
 {
-    public static int RecursiveLinearSearch(int[] list, int key, int index) 
+    public static int recursiveBinarySearch(int[] list, int key, int low, int high) 
     {
-        if (index >= list.length) 
+        if (low <= high) 
         {
-            return -1; // IF KEY IS NOT FOUND
-        }
+            int mid = (low + high) / 2;
 
-        if (list[index] == key) 
-        {
-            return index; 
+            if (key < list[mid])
+                return recursiveBinarySearch(list, key, low, mid - 1);
+            else if (key == list[mid])
+                return mid;
+            else
+                return recursiveBinarySearch(list, key, mid + 1, high);
         }
+        return -low - 1;
+    }
 
-        return RecursiveLinearSearch(list, key, index + 1);
+    public static int search(int[] list, int key) 
+    {
+        return recursiveBinarySearch(list, key, 0, list.length - 1);
     }
 
     public static void main(String[] args) 
     {
-        final int N = 100000;
+        final int N = 10000000;
         final int KEY = 150;
         int[] list = new int[N];
 
-        for (int i = 0; i < N; i++)
+        for (int i = 0; i < N; i++) 
         {
-            // GENERATOR FOR POSITIVE + NEGATIVE INTEGERS FROM -100 TO +100
             list[i] = (int)(Math.random() * 100 * (Math.random() > 0.5 ? 1 : -1));
-            // STD OUT: PRINT THE NUMBERS
             System.out.println(list[i] + ",");
         }
 
-        // STOPWATCH CODE
         long begin, end, time;
 
-        // START STOPWATCH
         begin = System.nanoTime();
         System.out.println("\n>> [Starting nanoTime() timer...]");
-        System.out.println(">> [Program return status on RecursiveLinearSearch(): " + RecursiveLinearSearch(list, KEY, 0) + "]");
+        System.out.println(">> [Program return status on RecursiveBinarySearch(): " + search(list, KEY) + "]");
         end = System.nanoTime();
         System.out.println(">> [Ended nanoTime() timer.]");
         System.out.println(">> [Calculating time in nanoseconds...]\n");
         time = end - begin;
-        System.out.println("It took " + time + " nanoseconds to run RecursiveLinearSearch() with the key " + KEY + " on the array of " + N + " elements.");
+        System.out.println("It took " + time + " nanoseconds to run RecursiveBinarySearch() with the key " + KEY + " on the array of " + N + " elements.");
     }
 }
+
