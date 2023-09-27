@@ -1,7 +1,6 @@
 package Java.year2.chapter1;
 import java.time.LocalDate;
 
-
 // ====================================================================================
 
 public class Chatbot 

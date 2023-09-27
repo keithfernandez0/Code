@@ -6,6 +6,13 @@
       "name": "TowerOfHanoi",
       "request": "launch",
       "mainClass": "Java.year2.chapter1.TowerOfHanoi",
+      "projectName": "Code_635e7fe"
+    },
+    {
+      "type": "java",
+      "name": "TowerOfHanoi",
+      "request": "launch",
+      "mainClass": "Java.year2.chapter1.TowerOfHanoi",
       "projectName": "Code_8519b18d"
     },
     {
