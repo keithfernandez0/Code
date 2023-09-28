@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "KeithRobot",
+      "request": "launch",
+      "mainClass": "Java.year2.chapter1.KeithRobot",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
       "name": "TowerOfHanoi",
       "request": "launch",
       "mainClass": "Java.year2.chapter1.TowerOfHanoi",
