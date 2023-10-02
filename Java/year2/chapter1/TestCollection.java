@@ -3,20 +3,12 @@
 // ID: 1209266
 // Email: fernkayl@kean.edu
 //
-<<<<<<< HEAD
-// ASSIGNMENT: UNIT 2, RECURSIVE THINKING
-=======
 // ASSIGNMENT: UNIT 3, BASIC DATA STRUCTURES
->>>>>>> a6996c6c96f6d5d3497596c47f89fd9317cdf6f8
 // FA23 CPS 2232-02
 // 10/1/2023
 // TestCollection.java
 // ====================================================================================
 
-<<<<<<< HEAD
-=======
-
->>>>>>> a6996c6c96f6d5d3497596c47f89fd9317cdf6f8
 package Java.year2.chapter1;
 import java.util.*;
 
