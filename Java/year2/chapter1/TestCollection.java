@@ -1,3 +1,14 @@
+// ====================================================================================
+// Keith Michelangelo Fernandez
+// ID: 1209266
+// Email: fernkayl@kean.edu
+//
+// ASSIGNMENT: UNIT 2, RECURSIVE THINKING
+// FA23 CPS 2232-02
+// 10/1/2023
+// TestCollection.java
+// ====================================================================================
+
 package Java.year2.chapter1;
 import java.util.*;
 

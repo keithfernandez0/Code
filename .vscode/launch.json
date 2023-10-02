@@ -3,6 +3,34 @@
   "configurations": [
     {
       "type": "java",
+      "name": "TestQueue",
+      "request": "launch",
+      "mainClass": "Java.year2.chapter1.TestQueue",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
+      "name": "TestStack",
+      "request": "launch",
+      "mainClass": "Java.year2.chapter1.TestStack",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
+      "name": "TestComparator",
+      "request": "launch",
+      "mainClass": "Java.year2.chapter1.TestComparator",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
+      "name": "TestForEach",
+      "request": "launch",
+      "mainClass": "Java.year2.chapter1.TestForEach",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
       "name": "KeithRobot",
       "request": "launch",
       "mainClass": "Java.year2.chapter1.KeithRobot",

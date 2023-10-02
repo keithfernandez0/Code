@@ -10,16 +10,16 @@
 
 
 package Java.year2.chapter1;
+import java.util.Comparator;
 
-interface Commandable<T> 
+class GeometricObjectComparator
+    implements Comparator<GeometricObject>, java.io.Serializable 
 {
-    void setCommand(String commandType, T commandValue);
-    T getCommandValue();
-
-    default void executeCommand()
+    public int compare(GeometricObject o1, GeometricObject o2) 
     {
-        System.out.print("Do it now for " + getCommandValue());
+        double perimeter1 = o1.getPerimeter();
+        double perimeter2 = o2.getPerimeter();
+
+        return perimeter1 > perimeter2 ? 1 : perimeter1 == perimeter2 ? 0 : -1;
     }
 }
-
-
