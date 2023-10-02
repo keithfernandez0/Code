@@ -1,16 +1,30 @@
+// ====================================================================================
+// Keith Michelangelo Fernandez
+// ID: 1209266
+// Email: fernkayl@kean.edu
+//
+// ASSIGNMENT: UNIT 3, BASIC DATA STRUCTURES
+// FA23 CPS 2232-02
+// 10/1/2023
+// TestCollection.java
+// ====================================================================================
+
+
 package Java.year2.chapter1;
 import java.util.*;
 
-public class TestCollection {
+public class TestCollection 
+{
     public static void main(String[] args) 
     {
-        ArrayList<String> collection1 = new ArrayList<>();
+        // USING TREESET
+        TreeSet<String> collection1 = new TreeSet<>();
         collection1.add("New York"); 
         collection1.add("Atlanta"); 
         collection1.add("Dallas"); 
-        collection1.add("Madison"); // Add "Madison" to collection1
+        collection1.add("Phoenix"); // ADDED NEW CITY
 
-        System.out.println("A list of cities in collection1:");
+        System.out.println("A set of cities in collection1:");
         System.out.println(collection1);
 
         System.out.println("\nIs Dallas in collection1? "
@@ -20,26 +34,28 @@ public class TestCollection {
         System.out.println("\n" + collection1.size() + 
         " cities are in collection1 now");
 
-        Collection<String> collection2 = new ArrayList<>();
+        // USING TREESET
+        TreeSet<String> collection2 = new TreeSet<>();
         collection2.add("Seattle"); 
         collection2.add("Portland"); 
-        collection2.add("Los Angles"); 
+        collection2.add("Los Angeles");
         collection2.add("Atlanta"); 
 
-        System.out.println("\nA list of cities in collection2:");
+        System.out.println("\nA set of cities in collection2:");
         System.out.println(collection2);
 
-        ArrayList<String> c1 = (ArrayList<String>)(collection1.clone());
-        c1.addAll(collection2); // Add all elements in collection2 to c1
+        // USING TREESET
+        TreeSet<String> c1 = new TreeSet<>(collection1);
+        c1.addAll(collection2);
         System.out.println("\nCities in collection1 or collection2: ");
         System.out.println(c1);
 
-        c1 = (ArrayList<String>)(collection1.clone());
+        c1 = new TreeSet<>(collection1);
         c1.retainAll(collection2);
         System.out.print("\nCities in collection1 and collection2: ");
         System.out.println(c1);
 
-        c1 = (ArrayList<String>)(collection1.clone());
+        c1 = new TreeSet<>(collection1);
         c1.removeAll(collection2);
         System.out.print("\nCities in collection1, but not in 2: ");
         System.out.println(c1);
