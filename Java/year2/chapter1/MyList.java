@@ -42,69 +42,70 @@ public interface MyList<E> extends Collection<E>
     @Override /** Add a new element at the end of this list */
     public default boolean add(E e) 
     {
-      add(size(), e);
-        return true;
+        add(size(), e);
+            return true;
     }
 
     @Override /** Return true if this list contains no elements */
     public default boolean isEmpty() 
     {
-      return size() == 0;
+        return size() == 0;
     }
 
-    @Override /** Remove the first occurrence of the element e 
+    @Override 
+    /** Remove the first occurrence of the element e 
     *  from this list. Shift any subsequent elements to the left.
     *  Return true if the element is removed. */
     public default boolean remove(Object e) 
     {
-      if (indexOf(e) >= 0) {
-        remove(indexOf(e));
-        return true;
-      }
-      else
-        return false;
+        if (indexOf(e) >= 0) {
+            remove(indexOf(e));
+            return true;
+        }
+        else
+            return false;
     }
 
     @Override
     public default boolean containsAll(Collection<?> c) 
     {
-      // Left as an exercise
-      return true;
+        // Left as an exercise
+        return true;
     }
 
     @Override
     public default boolean addAll(Collection<? extends E> c) 
     {
-      // Left as an exercise
-      return true;
+        // Left as an exercise
+        return true;
     }
 
     @Override
     public default boolean removeAll(Collection<?> c) 
     {
-      // Left as an exercise
-      return true;
+        // Left as an exercise
+        return true;
     }
 
     @Override
     public default boolean retainAll(Collection<?> c) 
     {
-      // Left as an exercise
-      return true;
+        // Left as an exercise
+        return true;
     }
 
     @Override
     public default Object[] toArray() 
     {
-      // Left as an exercise
-      return null;
+        // Left as an exercise
+        return null;
     }
 
     @Override
     public default <T> T[] toArray(T[] array) 
     {
-      // Left as an exercise
-      return null;
-    }
+        // Left as an exercise
+        return null;
+      }
 }
 
