@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "radius",
+      "request": "launch",
+      "mainClass": "radius",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
       "name": "TestQueue",
       "request": "launch",
       "mainClass": "Java.year2.chapter1.TestQueue",
