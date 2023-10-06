@@ -9,7 +9,7 @@
 // RecursiveSelectionSort.java
 // ====================================================================================
 
-package Java.year2.chapter1;
+package Java.year2.semester1.sorting_algorithms;
 
 public class RecursiveSelectionSort 
 {

@@ -9,7 +9,7 @@
 // ====================================================================================
 
 
-package Java.year2.chapter1;
+package Java.year2.semester1.generics;
 
 public class Rectangle extends GeometricObject {
     private double width;

@@ -9,7 +9,7 @@
 // ====================================================================================
 
 
-package Java.year2.chapter1;
+package Java.year2.semester1.arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 

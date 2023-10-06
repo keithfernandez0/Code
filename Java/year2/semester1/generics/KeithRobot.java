@@ -9,7 +9,7 @@
 // ====================================================================================
 
 
-package Java.year2.chapter1;
+package Java.year2.semester1.generics;
 import java.util.Random;
 import java.util.ArrayList;
 import java.util.List;

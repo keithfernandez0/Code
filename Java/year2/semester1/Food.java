@@ -8,7 +8,7 @@
 // 9/8/2023
 // ====================================================================================
 
-package Java.year2.chapter1.edible; // MISCELLANEOUS FILESTRUCTURE STUFF
+package Java.year2.semester1; // MISCELLANEOUS FILESTRUCTURE STUFF
 
 // ====================================================================================
 
