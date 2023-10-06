@@ -9,7 +9,6 @@
 // TowerOfHanoi.java
 // ====================================================================================
 
-
 package Java.year2.semester1.sorting_algorithms;
 import java.util.Scanner;
 
@@ -35,7 +34,7 @@ public class TowerOfHanoi
 
         System.out.println("It took " + time + " nanoseconds to solve the Tower of Hanoi puzzle with " + n + " disks.");
     }
-
+		
     public static void moveDisks(int n, char fromTower, char toTower, char auxTower) 
     {
         if (n == 1) // Stopping condition
