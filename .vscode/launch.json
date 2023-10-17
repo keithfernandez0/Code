@@ -3,6 +3,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "TestPriorityQueue",
+      "request": "launch",
+      "mainClass": "Java.year2.lab4.TestPriorityQueue",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
+      "name": "ReversedStack",
+      "request": "launch",
+      "mainClass": "Java.year2.lab4.ReversedStack",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
+      "name": "MyDoublyLinkedListDemo",
+      "request": "launch",
+      "mainClass": "Java.year2.lab4.MyDoublyLinkedListDemo",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
+      "name": "singleLinkedList",
+      "request": "launch",
+      "mainClass": "Java.year2.lab4.singleLinkedList",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
+      "name": "NewArrayList",
+      "request": "launch",
+      "mainClass": "Java.year2.lab4.NewArrayList",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
       "name": "radius",
       "request": "launch",
       "mainClass": "radius",
