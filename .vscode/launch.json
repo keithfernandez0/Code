@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "MaxElementFinder",
+      "request": "launch",
+      "mainClass": "Java.year2.semester1.sorting_algorithms.MaxElementFinder",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
       "name": "TestPriorityQueue",
       "request": "launch",
       "mainClass": "Java.year2.lab4.TestPriorityQueue",
