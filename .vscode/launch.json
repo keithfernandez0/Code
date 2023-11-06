@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "HeapSort",
+      "request": "launch",
+      "mainClass": "Java.year2.semester1.sorting_algorithms.HeapSort",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
+      "name": "RadixSort",
+      "request": "launch",
+      "mainClass": "Java.year2.semester1.sorting_algorithms.RadixSort",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
       "name": "MaxElementFinder",
       "request": "launch",
       "mainClass": "Java.year2.semester1.sorting_algorithms.MaxElementFinder",
