@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Main",
+      "request": "launch",
+      "mainClass": "Java.year2.semester1.trees.Main",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
+      "name": "BST",
+      "request": "launch",
+      "mainClass": "Java.year2.semester1.trees.BST",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
       "name": "BSTExample",
       "request": "launch",
       "mainClass": "Java.year2.semester1.trees.BSTExample",
