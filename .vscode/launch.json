@@ -3,6 +3,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "BSTExample",
+      "request": "launch",
+      "mainClass": "Java.year2.semester1.trees.BSTExample",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
       "name": "QuickSort",
       "request": "launch",
       "mainClass": "Java.year2.semester1.sorting_algorithms.QuickSort",
