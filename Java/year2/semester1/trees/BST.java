@@ -125,4 +125,7 @@ class BST<E extends Comparable<E>> {
             }
         }
     }
+
+    public void search(int target) {
+    }
 }

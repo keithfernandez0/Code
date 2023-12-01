@@ -3,6 +3,20 @@
   "configurations": [
     {
       "type": "java",
+      "name": "HashingDemo",
+      "request": "launch",
+      "mainClass": "Java.year2.semester1.trees.HashingDemo",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
+      "name": "AVLTree",
+      "request": "launch",
+      "mainClass": "Java.year2.semester1.trees.AVLTree",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
       "name": "BST$Main",
       "request": "launch",
       "mainClass": "Java.year2.semester1.trees.BST$Main",
