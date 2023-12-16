@@ -3,6 +3,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "TestWeightedGraph",
+      "request": "launch",
+      "mainClass": "Java.year2.semester1.graphs.TestWeightedGraph",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
+      "name": "GraphTest",
+      "request": "launch",
+      "mainClass": "Java.year2.semester1.graphs.GraphTest",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
+      "name": "GraphRepresentation",
+      "request": "launch",
+      "mainClass": "Java.year2.semester1.graphs.GraphRepresentation",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
+      "name": "GraphTraversal",
+      "request": "launch",
+      "mainClass": "Java.year2.semester1.graphs.GraphTraversal",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
+      "name": "GraphLab",
+      "request": "launch",
+      "mainClass": "Java.year2.semester1.graphs.GraphLab",
+      "projectName": "Code_8519b18d"
+    },
+    {
+      "type": "java",
       "name": "HashingDemo",
       "request": "launch",
       "mainClass": "Java.year2.semester1.trees.HashingDemo",
