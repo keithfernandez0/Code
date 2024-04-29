@@ -27,7 +27,7 @@
 #include <ncurses.h>
 
 #define MAX_PROCESSES 10
-#define MAX_QUEUES 3
+#define MAX_QUEUES 5
 
 struct Process {
     int id;
@@ -35,6 +35,8 @@ struct Process {
     int burst_time;
     int queue_number;
     int completion_time;
+    int waiting_time; 
+    int turnaround_time; 
 };
 
 /* 
@@ -68,6 +70,7 @@ void calc_completion(struct Process processes[], int num_processes) {
 
                 if (processes[process_index].burst_time == 0) {
                     processes[process_index].completion_time = current_time;
+                    processes[process_index].turnaround_time = current_time - processes[process_index].arrival_time; 
                     remaining_processes--;
                 }
 
@@ -80,7 +83,11 @@ void calc_completion(struct Process processes[], int num_processes) {
             }
         }
     }
-};
+    
+    for (int i = 0; i < num_processes; i++) {
+        processes[i].waiting_time = processes[i].turnaround_time - processes[i].burst_time;
+    }
+}
 
 /* 
  * Display the Gantt chart showing process IDs, arrival times, completion times, and turnaround times.
@@ -92,26 +99,29 @@ void calc_completion(struct Process processes[], int num_processes) {
 void display_chart(struct Process processes[], int num_processes) {
     initscr();
     printw("Gantt Chart:\n");
-    printw("----------------------------------------------------------------\n");
-    printw("| Process ID | Arrival Time | Completion Time | Turnaround Time |\n");
-    printw("----------------------------------------------------------------\n");
+    printw("-------------------------------------------------------------------------------\n");
+    printw("| Process ID | Arrival Time | Completion Time | Turnaround Time | Waiting Time |\n");
+    printw("-------------------------------------------------------------------------------\n");
 
     for (int i = 0; i < num_processes; i++) {
-        printw("|     %3d    |      %3d     |       %3d       |       %3d       |\n",
+        printw("|     %3d    |      %3d     |       %3d       |       %3d       |     %3d      |\n",
             processes[i].id, 
             processes[i].arrival_time, 
             processes[i].completion_time,
-            processes[i].completion_time - processes[i].arrival_time);
+            processes[i].turnaround_time,
+            processes[i].waiting_time);
     }
-    printw("----------------------------------------------------------------\n");
+    printw("-------------------------------------------------------------------------------\n");
     refresh();
     getch();
     endwin();
-};
+}
 
 int main() {
     int num_processes;
     struct Process processes[MAX_PROCESSES];
+    float total_turnaround_time = 0;
+    float total_waiting_time = 0;
 
     printf("\n");
     printf("Enter the number of processes: ");
@@ -134,5 +144,17 @@ int main() {
     calc_completion(processes, num_processes);
     display_chart(processes, num_processes);
 
+    for (int i = 0; i < num_processes; i++) {
+        total_turnaround_time += processes[i].turnaround_time;
+        total_waiting_time += processes[i].waiting_time;
+    }
+
+    float avg_turnaround_time = total_turnaround_time / num_processes;
+    float avg_waiting_time = total_waiting_time / num_processes;
+
+    printf("Average Turnaround Time: %.2f\n", avg_turnaround_time);
+    printf("Average Waiting Time: %.2f\n", avg_waiting_time);
+    printf("\n");
+    
     return 0;
-};
+}
