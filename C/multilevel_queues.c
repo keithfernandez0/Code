@@ -6,7 +6,7 @@
  * CPS 3250 Section 03, Spring 2024
  * Due date: 04/29/2024
  * 
- * File name: mutlilevel_queues.c
+ * File name: multilevel_queues.c
  * Editor: VSCode with C/C++ extensions
  * Apple clang version 14.0.0 (clang-1400.0.29.202)
  * Target: x86_64-apple-darwin21.6.0
